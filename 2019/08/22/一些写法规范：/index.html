@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+
+<head><meta name="generator" content="Hexo 3.9.0">
+  
+  <title>日行千里</title>
+  <meta charset="UTF-8">
+  <meta name="description" content="程序猿日常">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  
+
+  <link rel="shortcut icon" href="/favicon.ico" type="image/png">
+  <meta name="description" content="js或css一些写法规范1.字符串： 1234567&amp;lt;Link​          to=&amp;#123;`$&amp;#123;item.link&amp;#125;?id=$&amp;#123;item.id&amp;#125;`&amp;#125;​          className=&amp;#123;com.aboutListItem_link_foot&amp;#125;​        \&amp;gt;  2.函数简写 123456789">
+<meta property="og:type" content="article">
+<meta property="og:title" content="日行千里">
+<meta property="og:url" content="http://yoursite.com/2019/08/22/一些写法规范：/index.html">
+<meta property="og:site_name" content="日行千里">
+<meta property="og:description" content="js或css一些写法规范1.字符串： 1234567&amp;lt;Link​          to=&amp;#123;`$&amp;#123;item.link&amp;#125;?id=$&amp;#123;item.id&amp;#125;`&amp;#125;​          className=&amp;#123;com.aboutListItem_link_foot&amp;#125;​        \&amp;gt;  2.函数简写 123456789">
+<meta property="og:locale" content="zh-tw">
+<meta property="og:updated_time" content="2019-08-22T08:45:44.822Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="日行千里">
+<meta name="twitter:description" content="js或css一些写法规范1.字符串： 1234567&amp;lt;Link​          to=&amp;#123;`$&amp;#123;item.link&amp;#125;?id=$&amp;#123;item.id&amp;#125;`&amp;#125;​          className=&amp;#123;com.aboutListItem_link_foot&amp;#125;​        \&amp;gt;  2.函数简写 123456789">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdui@0.4.3/dist/css/mdui.min.css">
+  <link rel="stylesheet" href="./new.css">
+   
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
+  
+  <link rel="stylesheet" href="//at.alicdn.com/t/font_1038733_0xvrvpg9c0r.css">
+  <link rel="stylesheet" href="/css/style.css?v=1566464349262">
+</head>
+
+<body class="mdui-drawer-body-left">
+  
+  <div id="nexmoe-background">
+    <div class="nexmoe-bg" style="background-image: url(http://b-ssl.duitang.com/uploads/item/201708/24/20170824232705_Y2x58.jpeg)"></div>
+    <div class="mdui-appbar mdui-shadow-0">
+      <div class="mdui-toolbar">
+        <a mdui-drawer="{target: '#drawer', swipe: true}" title="menu" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">menu</i></a>
+        <div class="mdui-toolbar-spacer"></div>
+        <!--<a href="javascript:;" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">search</i></a>-->
+        <a href="/" title="shuo" class="mdui-btn mdui-btn-icon"><img src="http://img5.imgtn.bdimg.com/it/u=2904428160,267472721&amp;fm=26&amp;gp=0.jpg"></a>
+       </div>
+    </div>
+  </div>
+  <div id="nexmoe-header">
+      <div class="nexmoe-drawer mdui-drawer" id="drawer">
+    <div class="nexmoe-avatar mdui-ripple">
+        <a href="/" title="shuo">
+            <img src="http://img5.imgtn.bdimg.com/it/u=2904428160,267472721&amp;fm=26&amp;gp=0.jpg" alt="shuo">
+        </a>
+    </div>
+    <div class="nexmoe-count">
+        <div><span>Articles</span>8</div>
+        <div><span>Tags</span>0</div>
+        <div><span>Categories</span>0</div>
+    </div>
+    <ul class="nexmoe-list mdui-list" mdui-collapse="{accordion: true}">
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple" href="/" title="回到首页">
+            <i class="mdui-list-item-icon nexmoefont icon-home"></i>
+            <div class="mdui-list-item-content">
+                回到首页
+            </div>
+        </a>
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple" href="/about.html" title="关于博客">
+            <i class="mdui-list-item-icon nexmoefont icon-info-circle"></i>
+            <div class="mdui-list-item-content">
+                关于博客
+            </div>
+        </a>
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple" href="/PY.html" title="我的朋友">
+            <i class="mdui-list-item-icon nexmoefont icon-unorderedlist"></i>
+            <div class="mdui-list-item-content">
+                我的朋友
+            </div>
+        </a>
+        
+    </ul>
+    <aside id="nexmoe-sidebar">
+  
+  <div class="nexmoe-widget-wrap">
+    <h3 class="nexmoe-widget-title">Social</h3>
+    <div class="nexmoe-widget nexmoe-social">
+        <a class="mdui-ripple" href="https://space.bilibili.com/20238211" target="_blank" mdui-tooltip="{content: '哔哩哔哩'}" style="color: rgb(231, 106, 141);background-color: rgba(231, 106, 141, .15);">
+            <i class="nexmoefont icon-bilibili"></i>
+        </a><a class="mdui-ripple" href="https://github.com/nexmoe/" target="_blank" mdui-tooltip="{content: 'GitHub'}" style="color: rgb(25, 23, 23);background-color: rgba(25, 23, 23, .15);">
+            <i class="nexmoefont icon-github"></i>
+        </a>
+    </div>
+</div>
+  
+  
+
+  
+  
+  
+  
+  <div class="nexmoe-widget-wrap">
+    <h3 class="nexmoe-widget-title">Archive</h3>
+    <div class="nexmoe-widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/08/">八月 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+</aside>
+    <div class="nexmoe-copyright">
+        &copy; 2019 shuo
+        Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+        & <a href="https://nexmoe.com/hexo-theme-nexmoe.html" target="_blank">Nexmoe</a>
+    </div>
+</div><!-- .nexmoe-drawer -->
+  </div>
+  <div id="nexmoe-content">
+    <div class="nexmoe-primary">
+        <div class="nexmoe-post">
+    <div class="nexmoe-post-cover"> 
+        
+            <img src="http://b-ssl.duitang.com/uploads/item/201708/24/20170824232705_Y2x58.jpeg">
+        
+        <h1></h1>
+    </div>
+  <div class="nexmoe-post-meta">
+    <a><i class="nexmoefont icon-calendar-fill"></i>2019年08月22日</a>
+    <a><i class="nexmoefont icon-areachart"></i>814 字</a>
+    <a><i class="nexmoefont icon-time-circle-fill"></i>大概 4 分钟</a>
+    
+    
+  </div>
+  <article>
+    <h1 id="js或css一些写法规范"><a href="#js或css一些写法规范" class="headerlink" title="js或css一些写法规范"></a>js或css一些写法规范</h1><p>1.字符串：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">Link</span></span></span><br><span class="line"><span class="tag"></span></span><br><span class="line"><span class="tag">​          <span class="attr">to</span>=<span class="string">&#123;</span>`$&#123;<span class="attr">item.link</span>&#125;?<span class="attr">id</span>=<span class="string">$&#123;item.id&#125;</span>`&#125;</span></span><br><span class="line"><span class="tag"></span></span><br><span class="line"><span class="tag">​          <span class="attr">className</span>=<span class="string">&#123;com.aboutListItem_link_foot&#125;</span></span></span><br><span class="line"><span class="tag"></span></span><br><span class="line"><span class="tag">​        \&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>2.函数简写</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">handleSelectBan = <span class="function">(<span class="params">id</span>) =&gt;</span> &#123;</span><br><span class="line"></span><br><span class="line">​    <span class="keyword">const</span> &#123; handleSelectHead &#125; = <span class="keyword">this</span>.props;</span><br><span class="line"></span><br><span class="line">​    <span class="keyword">this</span>.setState(&#123;</span><br><span class="line"></span><br><span class="line">​      sele: <span class="literal">false</span></span><br><span class="line"></span><br><span class="line">​    &#125;)</span><br><span class="line"></span><br><span class="line">​    handleSelectHead(id)</span><br><span class="line"></span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+
+<p>3.connect的简写</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">@connect(<span class="function">(<span class="params">&#123; sidelist_news &#125;</span>) =&gt;</span> (&#123;</span><br><span class="line"></span><br><span class="line">  selectednav: sidelist_news.selectednav,</span><br><span class="line"></span><br><span class="line">&#125;))</span><br></pre></td></tr></table></figure>
+
+<p>sidelist_news:models的名字</p>
+<p>4。引用本地图片：</p>
+<p>&lt;img src={require(‘../assets/picture.png’)} /&gt;</p>
+<p>5.数组的操作：</p>
+<p>arr.reduce()===》reduce方法是对累计者和函数中的每一个元素(从左到右)去应用一个函数，最终将返回一个值</p>
+<p><a href="https://www.jianshu.com/p/fa146e5cbf8d" target="_blank" rel="noopener">https://www.jianshu.com/p/fa146e5cbf8d</a></p>
+<p>6.css、html、js规范</p>
+<p>文件资源命名：小写字母，含多个单词用（-）分隔</p>
+<p>变量命名：小驼峰（类型+对象描述）</p>
+<p>函数：小驼峰（构造函数使用大驼峰命名法）</p>
+<p>常量：大写+下划线</p>
+<p>类：私有属性和方法:_name</p>
+<p>HTML：<!DOCTYPE html></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">.text-box:before &#123;</span><br><span class="line">  content: &quot;&quot;;</span><br><span class="line">  display: inline-block;</span><br><span class="line">  width: 1rem;</span><br><span class="line">  height: 1rem;</span><br><span class="line">  background-color: red;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>避免全局污染：使用IIFE写法</p>
+<p>css:使用子选择器：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">.content &gt; .title&#123;</span><br><span class="line">     font-size:2rem;</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
+
+<p>属性格式：</p>
+<p>结构型属性：</p>
+<ol>
+<li>display</li>
+<li>position,left,top,right,etc</li>
+<li>overflow,float,clear,etc</li>
+<li>margin,padding</li>
+</ol>
+<p>表现型属性：</p>
+<ol>
+<li>background,border,etc</li>
+<li>font,text</li>
+</ol>
+<p>7.对象的写法：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> atom=&#123;</span><br><span class="line"></span><br><span class="line">  value:<span class="number">1</span>,</span><br><span class="line"></span><br><span class="line">  addValue(value)&#123;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> atom.value+value</span><br><span class="line"></span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>8。单引号只用在无效标识的属性</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> good = &#123;</span><br><span class="line">  foo: <span class="number">3</span>,</span><br><span class="line">  bar: <span class="number">4</span>,</span><br><span class="line">  <span class="string">'data-blah'</span>: <span class="number">5</span>,</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// bad</span></span><br><span class="line"><span class="built_in">console</span>.log(object.hasOwnProperty(key));</span><br><span class="line"></span><br><span class="line"><span class="comment">// good</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Object</span>.prototype.hasOwnProperty.call(object, key));</span><br><span class="line"></span><br><span class="line"><span class="comment">// best</span></span><br><span class="line"><span class="keyword">const</span> has = <span class="built_in">Object</span>.prototype.hasOwnProperty; <span class="comment">// cache the lookup once, in module scope.</span></span><br><span class="line"><span class="built_in">console</span>.log(has.call(object, key));</span><br><span class="line"><span class="comment">/* or */</span></span><br><span class="line"><span class="keyword">import</span> has <span class="keyword">from</span> <span class="string">'has'</span>; <span class="comment">// https://www.npmjs.com/package/has</span></span><br><span class="line"><span class="built_in">console</span>.log(has(object, key));</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// very bad</span></span><br><span class="line"><span class="keyword">const</span> original = &#123; <span class="attr">a</span>: <span class="number">1</span>, <span class="attr">b</span>: <span class="number">2</span> &#125;;</span><br><span class="line"><span class="keyword">const</span> copy = <span class="built_in">Object</span>.assign(original, &#123; <span class="attr">c</span>: <span class="number">3</span> &#125;); <span class="comment">// this mutates `original` ಠ_ಠ</span></span><br><span class="line"><span class="keyword">delete</span> copy.a; <span class="comment">// so does this</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// bad</span></span><br><span class="line"><span class="keyword">const</span> original = &#123; <span class="attr">a</span>: <span class="number">1</span>, <span class="attr">b</span>: <span class="number">2</span> &#125;;</span><br><span class="line"><span class="keyword">const</span> copy = <span class="built_in">Object</span>.assign(&#123;&#125;, original, &#123; <span class="attr">c</span>: <span class="number">3</span> &#125;); <span class="comment">// copy =&gt; &#123; a: 1, b: 2, c: 3 &#125;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// good</span></span><br><span class="line"><span class="keyword">const</span> original = &#123; <span class="attr">a</span>: <span class="number">1</span>, <span class="attr">b</span>: <span class="number">2</span> &#125;;</span><br><span class="line"><span class="keyword">const</span> copy = &#123; ...original, <span class="attr">c</span>: <span class="number">3</span> &#125;; <span class="comment">// copy =&gt; &#123; a: 1, b: 2, c: 3 &#125;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> &#123; a, ...noA &#125; = copy; <span class="comment">// noA =&gt; &#123; b: 2, c: 3 &#125;</span></span><br></pre></td></tr></table></figure>
+
+<p>9.数组</p>
+<p>（1）赋值：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> someStack = [];</span><br><span class="line"></span><br><span class="line"><span class="comment">// bad</span></span><br><span class="line">someStack[someStack.length] = <span class="string">'abracadabra'</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// good</span></span><br><span class="line">someStack.push(<span class="string">'abracadabra'</span>);</span><br></pre></td></tr></table></figure>
+
+<p>（2）复制：</p>
+<p>const itemslist=[…items]</p>
+<p>（3）重构对象为数组：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> nodes = <span class="built_in">Array</span>.from(foo);</span><br><span class="line"></span><br><span class="line"><span class="comment">// best</span></span><br><span class="line"><span class="keyword">const</span> nodes = [...foo];</span><br></pre></td></tr></table></figure>
+
+<p>（4）迭代映射：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// bad</span></span><br><span class="line"><span class="keyword">const</span> baz = [...foo].map(bar);</span><br><span class="line"></span><br><span class="line"><span class="comment">// good</span></span><br><span class="line"><span class="keyword">const</span> baz = <span class="built_in">Array</span>.from(foo, bar);</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">inbox.filter(<span class="function">(<span class="params">msg</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">const</span> &#123; subject, author &#125; = msg;</span><br><span class="line">  <span class="keyword">if</span> (subject === <span class="string">'Mockingbird'</span>) &#123;</span><br><span class="line">    <span class="keyword">return</span> author === <span class="string">'Harper Lee'</span>;</span><br><span class="line">  &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="comment">// good</span></span><br><span class="line">inbox.filter(<span class="function">(<span class="params">msg</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">const</span> &#123; subject, author &#125; = msg;</span><br><span class="line">  <span class="keyword">if</span> (subject === <span class="string">'Mockingbird'</span>) &#123;</span><br><span class="line">    <span class="keyword">return</span> author === <span class="string">'Harper Lee'</span>;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<p>声明规范：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">/ bad</span><br><span class="line"><span class="keyword">const</span> arr = [</span><br><span class="line">  [<span class="number">0</span>, <span class="number">1</span>], [<span class="number">2</span>, <span class="number">3</span>], [<span class="number">4</span>, <span class="number">5</span>],</span><br><span class="line">];</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> objectInArray = [&#123;</span><br><span class="line">  id: <span class="number">1</span>,</span><br><span class="line">&#125;, &#123;</span><br><span class="line">  id: <span class="number">2</span>,</span><br><span class="line">&#125;];</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> numberInArray = [</span><br><span class="line">  <span class="number">1</span>, <span class="number">2</span>,</span><br><span class="line">];</span><br><span class="line"></span><br><span class="line"><span class="comment">// good</span></span><br><span class="line"><span class="keyword">const</span> arr = [[<span class="number">0</span>, <span class="number">1</span>], [<span class="number">2</span>, <span class="number">3</span>], [<span class="number">4</span>, <span class="number">5</span>]];</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> objectInArray = [</span><br><span class="line">  &#123;</span><br><span class="line">    id: <span class="number">1</span>,</span><br><span class="line">  &#125;,</span><br><span class="line">  &#123;</span><br><span class="line">    id: <span class="number">2</span>,</span><br><span class="line">  &#125;,</span><br><span class="line">];</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> numberInArray = [</span><br><span class="line">  <span class="number">1</span>,</span><br><span class="line">  <span class="number">2</span>,</span><br><span class="line">];</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> arr = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>];</span><br><span class="line"></span><br><span class="line"><span class="comment">// bad</span></span><br><span class="line"><span class="keyword">const</span> first = arr[<span class="number">0</span>];</span><br><span class="line"><span class="keyword">const</span> second = arr[<span class="number">1</span>];</span><br><span class="line"></span><br><span class="line"><span class="comment">// good</span></span><br><span class="line"><span class="keyword">const</span> [first, second] = arr;</span><br></pre></td></tr></table></figure>
+
+<p>对多个返回值使用对象解构，而不是数组解构。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// bad</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">processInput</span>(<span class="params">input</span>) </span>&#123;</span><br><span class="line">  <span class="comment">// then a miracle occurs</span></span><br><span class="line">  <span class="keyword">return</span> [left, right, top, bottom];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// the caller needs to think about the order of return data</span></span><br><span class="line"><span class="keyword">const</span> [left, __, top] = processInput(input);</span><br><span class="line"></span><br><span class="line"><span class="comment">// good</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">processInput</span>(<span class="params">input</span>) </span>&#123;</span><br><span class="line">  <span class="comment">// then a miracle occurs</span></span><br><span class="line">  <span class="keyword">return</span> &#123; left, right, top, bottom &#125;;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// the caller selects only the data they need</span></span><br><span class="line"><span class="keyword">const</span> &#123; left, top &#125; = processInput(input);</span><br></pre></td></tr></table></figure>
+
+<p>字符串用单引号。</p>
+<p>10.函数</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// bad</span></span><br><span class="line"><span class="keyword">if</span> (currentUser) &#123;</span><br><span class="line">  <span class="function"><span class="keyword">function</span> <span class="title">test</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'Nope.'</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// good</span></span><br><span class="line"><span class="keyword">let</span> test;</span><br><span class="line"><span class="keyword">if</span> (currentUser) &#123;</span><br><span class="line">  test = <span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'Yup.'</span>);</span><br><span class="line">  &#125;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">concatenateAll</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">const</span> args = <span class="built_in">Array</span>.prototype.slice.call(<span class="built_in">arguments</span>);</span><br><span class="line">  <span class="keyword">return</span> args.join(<span class="string">''</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// good</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">concatenateAll</span>(<span class="params">...args</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> args.join(<span class="string">''</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// bad</span></span><br><span class="line"><span class="keyword">const</span> f = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;&#125;;</span><br><span class="line"><span class="keyword">const</span> g = <span class="function"><span class="keyword">function</span> (<span class="params"></span>)</span>&#123;&#125;;</span><br><span class="line"><span class="keyword">const</span> h = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">// good</span></span><br><span class="line"><span class="keyword">const</span> x = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;&#125;;</span><br><span class="line"><span class="keyword">const</span> y = <span class="function"><span class="keyword">function</span> <span class="title">a</span>(<span class="params"></span>) </span>&#123;&#125;;</span><br></pre></td></tr></table></figure>
+  </article>
+  
+    
+<div class="nexmoe-post-copyright">
+<i class="mdui-list-item-icon nexmoefont icon-info-circle"></i>
+<strong>Author：</strong>shuo<br>
+<strong>Link：</strong><a href="http://yoursite.com/2019/08/22/一些写法规范：/" title="http://yoursite.com/2019/08/22/一些写法规范：/" target="_blank" rel="noopener">http://yoursite.com/2019/08/22/一些写法规范：/</a><br>
+
+  <strong>版权声明：</strong>本文采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/deed.zh" target="_blank">CC BY-NC-SA 3.0 CN</a> 协议进行许可
+
+</div>
+
+
+  
+  <section class="nexmoe-comment">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1.5.0/dist/gitalk.min.css">
+<div id="gitalk"></div>
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1.5.0/dist/gitalk.min.js"></script>
+<script type="text/javascript">
+    var gitalk = new Gitalk({
+        clientID: '80b2453b6d5f37ad6225',
+        clientSecret: '43e99fa852795c9a7b3eb924b2558c64b84bbdeb',
+        id: window.location.pathname,
+        repo: 'nexmoe.github.io',
+        owner: 'nexmoe',
+        admin: 'nexmoe'
+    })
+    gitalk.render('gitalk')
+</script>
+</section>
+</div>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/mdui@0.4.3/dist/js/mdui.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+ 
+    <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+
+
+ 
+    <script src="https://cdn.jsdelivr.net/npm/smoothscroll-for-websites@1.4.9/SmoothScroll.min.js"></script>
+
+
+<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.15.8/build/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+<script src="/js/app.js?v=1566464349269"></script>
+<script src="https://cdn.jsdelivr.net/npm/lazysizes@5.1.0/lazysizes.min.js"></script>
+
+  
+
+
+
+
+
+</body>
+
+</html>

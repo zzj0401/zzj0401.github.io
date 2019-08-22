@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html>
+
+<head><meta name="generator" content="Hexo 3.9.0">
+  
+  <title>日行千里</title>
+  <meta charset="UTF-8">
+  <meta name="description" content="程序猿日常">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  
+
+  <link rel="shortcut icon" href="/favicon.ico" type="image/png">
+  <meta name="description" content="关于antd pro1.安装：yarn create umi 或 npm create umi,选择antd-design-pro 或者直接从https://github.com/ant-design/ant-design-pro/releases/tag/2.1.0下载（没有typeScripe） 2.从服务器请求菜单 在src/layouts/BasicLayout.tsx中修改menuDat">
+<meta property="og:type" content="article">
+<meta property="og:title" content="日行千里">
+<meta property="og:url" content="http://yoursite.com/2019/08/22/关于antd pro/index.html">
+<meta property="og:site_name" content="日行千里">
+<meta property="og:description" content="关于antd pro1.安装：yarn create umi 或 npm create umi,选择antd-design-pro 或者直接从https://github.com/ant-design/ant-design-pro/releases/tag/2.1.0下载（没有typeScripe） 2.从服务器请求菜单 在src/layouts/BasicLayout.tsx中修改menuDat">
+<meta property="og:locale" content="zh-tw">
+<meta property="og:updated_time" content="2019-08-22T08:43:22.513Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="日行千里">
+<meta name="twitter:description" content="关于antd pro1.安装：yarn create umi 或 npm create umi,选择antd-design-pro 或者直接从https://github.com/ant-design/ant-design-pro/releases/tag/2.1.0下载（没有typeScripe） 2.从服务器请求菜单 在src/layouts/BasicLayout.tsx中修改menuDat">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdui@0.4.3/dist/css/mdui.min.css">
+  <link rel="stylesheet" href="./new.css">
+   
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
+  
+  <link rel="stylesheet" href="//at.alicdn.com/t/font_1038733_0xvrvpg9c0r.css">
+  <link rel="stylesheet" href="/css/style.css?v=1566464349288">
+</head>
+
+<body class="mdui-drawer-body-left">
+  
+  <div id="nexmoe-background">
+    <div class="nexmoe-bg" style="background-image: url(http://b-ssl.duitang.com/uploads/item/201708/24/20170824232705_Y2x58.jpeg)"></div>
+    <div class="mdui-appbar mdui-shadow-0">
+      <div class="mdui-toolbar">
+        <a mdui-drawer="{target: '#drawer', swipe: true}" title="menu" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">menu</i></a>
+        <div class="mdui-toolbar-spacer"></div>
+        <!--<a href="javascript:;" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">search</i></a>-->
+        <a href="/" title="shuo" class="mdui-btn mdui-btn-icon"><img src="http://img5.imgtn.bdimg.com/it/u=2904428160,267472721&amp;fm=26&amp;gp=0.jpg"></a>
+       </div>
+    </div>
+  </div>
+  <div id="nexmoe-header">
+      <div class="nexmoe-drawer mdui-drawer" id="drawer">
+    <div class="nexmoe-avatar mdui-ripple">
+        <a href="/" title="shuo">
+            <img src="http://img5.imgtn.bdimg.com/it/u=2904428160,267472721&amp;fm=26&amp;gp=0.jpg" alt="shuo">
+        </a>
+    </div>
+    <div class="nexmoe-count">
+        <div><span>Articles</span>8</div>
+        <div><span>Tags</span>0</div>
+        <div><span>Categories</span>0</div>
+    </div>
+    <ul class="nexmoe-list mdui-list" mdui-collapse="{accordion: true}">
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple" href="/" title="回到首页">
+            <i class="mdui-list-item-icon nexmoefont icon-home"></i>
+            <div class="mdui-list-item-content">
+                回到首页
+            </div>
+        </a>
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple" href="/about.html" title="关于博客">
+            <i class="mdui-list-item-icon nexmoefont icon-info-circle"></i>
+            <div class="mdui-list-item-content">
+                关于博客
+            </div>
+        </a>
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple" href="/PY.html" title="我的朋友">
+            <i class="mdui-list-item-icon nexmoefont icon-unorderedlist"></i>
+            <div class="mdui-list-item-content">
+                我的朋友
+            </div>
+        </a>
+        
+    </ul>
+    <aside id="nexmoe-sidebar">
+  
+  <div class="nexmoe-widget-wrap">
+    <h3 class="nexmoe-widget-title">Social</h3>
+    <div class="nexmoe-widget nexmoe-social">
+        <a class="mdui-ripple" href="https://space.bilibili.com/20238211" target="_blank" mdui-tooltip="{content: '哔哩哔哩'}" style="color: rgb(231, 106, 141);background-color: rgba(231, 106, 141, .15);">
+            <i class="nexmoefont icon-bilibili"></i>
+        </a><a class="mdui-ripple" href="https://github.com/nexmoe/" target="_blank" mdui-tooltip="{content: 'GitHub'}" style="color: rgb(25, 23, 23);background-color: rgba(25, 23, 23, .15);">
+            <i class="nexmoefont icon-github"></i>
+        </a>
+    </div>
+</div>
+  
+  
+
+  
+  
+  
+  
+  <div class="nexmoe-widget-wrap">
+    <h3 class="nexmoe-widget-title">Archive</h3>
+    <div class="nexmoe-widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/08/">八月 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+</aside>
+    <div class="nexmoe-copyright">
+        &copy; 2019 shuo
+        Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+        & <a href="https://nexmoe.com/hexo-theme-nexmoe.html" target="_blank">Nexmoe</a>
+    </div>
+</div><!-- .nexmoe-drawer -->
+  </div>
+  <div id="nexmoe-content">
+    <div class="nexmoe-primary">
+        <div class="nexmoe-post">
+    <div class="nexmoe-post-cover"> 
+        
+            <img src="http://b-ssl.duitang.com/uploads/item/201708/24/20170824232705_Y2x58.jpeg">
+        
+        <h1></h1>
+    </div>
+  <div class="nexmoe-post-meta">
+    <a><i class="nexmoefont icon-calendar-fill"></i>2019年08月22日</a>
+    <a><i class="nexmoefont icon-areachart"></i>740 字</a>
+    <a><i class="nexmoefont icon-time-circle-fill"></i>大概 3 分钟</a>
+    
+    
+  </div>
+  <article>
+    <h1 id="关于antd-pro"><a href="#关于antd-pro" class="headerlink" title="关于antd pro"></a>关于antd pro</h1><p>1.安装：yarn create umi 或 npm create umi,选择antd-design-pro</p>
+<p>或者直接从<a href="https://github.com/ant-design/ant-design-pro/releases/tag/2.1.0下载（没有typeScripe）" target="_blank" rel="noopener">https://github.com/ant-design/ant-design-pro/releases/tag/2.1.0下载（没有typeScripe）</a></p>
+<p>2.从服务器请求菜单</p>
+<p>在src/layouts/BasicLayout.tsx中修改menuDataRender</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> [menuData,setMenuData]=useState([])</span><br><span class="line"></span><br><span class="line">useEffect(<span class="function"><span class="params">()</span>=&gt;</span>&#123;</span><br><span class="line"></span><br><span class="line">  fetch(<span class="string">'/api/example.json'</span>)</span><br><span class="line"></span><br><span class="line">  .then(<span class="function"><span class="params">response</span>=&gt;</span>response.json())</span><br><span class="line"></span><br><span class="line">  .then(<span class="function"><span class="params">data</span>=&gt;</span>&#123;</span><br><span class="line"></span><br><span class="line">    setMenuData(data||[]);</span><br><span class="line"></span><br><span class="line">   &#125;);</span><br><span class="line"></span><br><span class="line">  &#125;,[]);</span><br><span class="line"></span><br><span class="line">......</span><br><span class="line"></span><br><span class="line"><span class="keyword">return</span>(</span><br><span class="line"></span><br><span class="line">  &lt;ProLayout</span><br><span class="line"></span><br><span class="line">    ...</span><br><span class="line"></span><br><span class="line">    menuDataRender=&#123;()=&gt;menuData&#125;</span><br><span class="line"></span><br><span class="line">    ...</span><br><span class="line"></span><br><span class="line">   /&gt;</span><br><span class="line"></span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+
+<p>3.build之后如何使用mock</p>
+<p>全局安装umi-serve,再修改项目中的请求地址</p>
+<p>4.使用图片静态资源：&lt;img src={require(‘../assets/picture.png’)}/&gt;</p>
+<p>5.路由和菜单：统一在config.ts配置管理</p>
+<p>===》</p>
+<p>（1）。路由属性：name,icon,hideChildrenInMenu,hideInMenu,authority</p>
+<p>（2）。菜单：根据config.ts生成</p>
+<p>（3）。面包屑：由PageHeaderWrapper生成</p>
+<p>====》菜单跳转到外部地址：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line"></span><br><span class="line">path:<span class="string">'https://pro.ant.design/docs/getting-started-cn'</span>,</span><br><span class="line"></span><br><span class="line">target:<span class="string">'_blank'</span>,</span><br><span class="line"></span><br><span class="line">name:<span class="string">"文档"</span></span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>=====》新增页面</p>
+<p>如果页面可以利用两种自带的布局：BasicLayout以及UserLayout</p>
+<p>//app</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line"></span><br><span class="line">  path:<span class="string">'/'</span>,</span><br><span class="line"></span><br><span class="line">  component:<span class="string">'../layouts/BasicLayout'</span>,</span><br><span class="line"></span><br><span class="line">  routes:[</span><br><span class="line"></span><br><span class="line">   &#123;<span class="attr">path</span>:<span class="string">'/'</span>,<span class="attr">redirect</span>:<span class="string">'/dashboard/analysis'</span>&#125;</span><br><span class="line"></span><br><span class="line">   &#123;<span class="attr">path</span>:<span class="string">'/dashboard/test'</span>,<span class="attr">component</span>:<span class="string">"./Dashboard/Test"</span>&#125;,</span><br><span class="line"></span><br><span class="line">  ...</span><br><span class="line"></span><br><span class="line">   ]</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>加好后会默认生成相关的路由和导航</p>
+<p>======》带参数的路由</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line"></span><br><span class="line">path:<span class="string">'/dashboard/:page'</span>,</span><br><span class="line"></span><br><span class="line">hideInmenu:<span class="literal">true</span>,</span><br><span class="line"></span><br><span class="line">name:<span class="string">'analysis'</span>,</span><br><span class="line"></span><br><span class="line">component:<span class="string">'./Dashboard/Analysis'</span></span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">router.push(<span class="string">'/dashboard/anyParams'</span>);</span><br></pre></td></tr></table></figure>
+
+<p>或：<link to="/dashboard/anyParams">go</p>
+<p>6.Ant Design布局组件</p>
+<p>  Grid组件 Layout组件</p>
+<p>7.区块</p>
+<p>========》查看区块：umi block list</p>
+<p>========》添加区块：umi block add [block url]</p>
+<p>========》添加到路由：umi block add ant-design-pro/analysis  –path=your/path/here</p>
+<p>–path:参数指定路由</p>
+<p>8.样式</p>
+<p>========》样式文件类别：</p>
+<p>（1）全局</p>
+<p>（2）工具：utils.less</p>
+<p>（3）模块（通用模块）</p>
+<p>（4）页面</p>
+<p>（5）组件</p>
+<p>========》覆盖组件样式：:global{}</p>
+<p>9.和服务端交互：统一放在services文件夹里，<code>utils/request.ts</code> 是基于 <a href="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch" target="_blank" rel="noopener">fetch</a> 的封装，便于统一处理 POST，GET 等请求参数，请求头，以及错误提示信息等</p>
+<p>=======》请求用户信息的例子：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//services/user.ts</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> request <span class="keyword">from</span> <span class="string">'../utils/request'</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">async</span> <span class="function"><span class="keyword">function</span> <span class="title">query</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> request(<span class="string">'/api/users'</span>)</span><br><span class="line"></span><br><span class="line"> &#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">async</span> <span class="function"><span class="keyword">function</span> <span class="title">queryCurrent</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> request(<span class="string">'/api/currentUser'</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//models/user.ts</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> &#123;queryCurrent&#125; <span class="keyword">from</span> <span class="string">'../services/user'</span></span><br><span class="line"></span><br><span class="line">effects:&#123;</span><br><span class="line"></span><br><span class="line">  *fetch(&#123;payload&#125;,&#123;call,put&#125;)&#123;</span><br><span class="line"></span><br><span class="line">  ....</span><br><span class="line"></span><br><span class="line">  <span class="keyword">const</span> response=<span class="keyword">yield</span> call(queryCurrent)</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>处理异步请求</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">effects:&#123;</span><br><span class="line"></span><br><span class="line">  *fetch(&#123;payload&#125;,&#123;call,put&#125;)&#123;</span><br><span class="line"></span><br><span class="line">     <span class="keyword">yield</span> put(&#123;</span><br><span class="line"></span><br><span class="line">       type:<span class="string">'changeLoading'</span>,</span><br><span class="line"></span><br><span class="line">       payload:<span class="literal">true</span></span><br><span class="line"></span><br><span class="line">    &#125;);</span><br><span class="line"></span><br><span class="line"><span class="comment">//异步请求</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> response=<span class="keyword">yield</span> call(queryFakeList,payload);</span><br><span class="line"></span><br><span class="line">   <span class="keyword">yield</span> put(&#123;</span><br><span class="line"></span><br><span class="line">        type:<span class="string">'save'</span>,</span><br><span class="line"></span><br><span class="line">        payload:response,</span><br><span class="line"></span><br><span class="line">   &#125;)</span><br><span class="line"></span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>10.mock</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">default</span>&#123;</span><br><span class="line"></span><br><span class="line"><span class="string">'GET /api/users'</span>:&#123;<span class="attr">users</span>:[<span class="number">1</span>,<span class="number">2</span>]&#125;,</span><br><span class="line"></span><br><span class="line"><span class="string">'/api/users/1'</span>:&#123;<span class="attr">id</span>:<span class="number">1</span>&#125;,</span><br><span class="line"></span><br><span class="line"><span class="string">'POST /api/users/create'</span>:<span class="function">(<span class="params">req,res</span>)=&gt;</span>&#123;res.end(<span class="string">'OK'</span>);&#125;,</span><br><span class="line"></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>=====》引入Mock.js</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> mockjs <span class="keyword">from</span> <span class="string">'mockjs'</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span>&#123;</span><br><span class="line"></span><br><span class="line">  <span class="string">'GET /api/tags'</span>:mockjs.mock(&#123;</span><br><span class="line"></span><br><span class="line">  <span class="string">'list|100'</span>:[&#123; <span class="attr">name</span>: <span class="string">'@city'</span>, <span class="string">'value|1-100'</span>: <span class="number">50</span>, <span class="string">'type|0-2'</span>: <span class="number">1</span> &#125;]</span><br><span class="line"></span><br><span class="line">  &#125;)</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>添加跨域请求头</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">‘POST /api/users/create<span class="string">':(req,res)=&gt;&#123;</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">  ...</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">  res.setHeader('</span>Access-Control-Allow-Origin<span class="string">','</span>*<span class="string">');</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">  ...</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">&#125;</span></span><br></pre></td></tr></table></figure>
+
+<p>模拟延迟：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">'POST /api/forms'</span>:<span class="function">(<span class="params">req,res</span>)=&gt;</span>&#123;</span><br><span class="line"></span><br><span class="line">   setTimeout(<span class="function"><span class="params">()</span>=&gt;</span>&#123;</span><br><span class="line"></span><br><span class="line">     res.send(<span class="string">'ok'</span>);</span><br><span class="line"></span><br><span class="line">    &#125;,<span class="number">1000</span>);</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; delay &#125; <span class="keyword">from</span> <span class="string">'roadhog-api-doc'</span>;</span><br><span class="line"><span class="comment">// 调用 delay 函数，统一处理</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> delay(proxy, <span class="number">1000</span>);</span><br></pre></td></tr></table></figure>
+
+<p>====》动态Mock数据</p>
+<p>函数：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">'/api/random'</span>:<span class="function">(<span class="params">req,res</span>)=&gt;</span>&#123;</span><br><span class="line"></span><br><span class="line">res.send(Mock.mock(&#123;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">// 每次请求均产生随机值</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="string">'number|1-100'</span>:<span class="number">100</span></span><br><span class="line"></span><br><span class="line">&#125;))</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>11.权限路由</p>
+<p>只须在路由配置文件 <a href="https://github.com/ant-design/ant-design-pro/blob/33f562974d1c72e077652223bd816a57933fe242/config/config.ts" target="_blank" rel="noopener">config.ts</a> 中设置 <code>Routes</code> 属性即可，代表该路由的准入权限。</p>
+
+  </article>
+  
+    
+<div class="nexmoe-post-copyright">
+<i class="mdui-list-item-icon nexmoefont icon-info-circle"></i>
+<strong>Author：</strong>shuo<br>
+<strong>Link：</strong><a href="http://yoursite.com/2019/08/22/关于antd pro/" title="http://yoursite.com/2019/08/22/关于antd pro/" target="_blank" rel="noopener">http://yoursite.com/2019/08/22/关于antd pro/</a><br>
+
+  <strong>版权声明：</strong>本文采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/deed.zh" target="_blank">CC BY-NC-SA 3.0 CN</a> 协议进行许可
+
+</div>
+
+
+  
+  <section class="nexmoe-comment">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1.5.0/dist/gitalk.min.css">
+<div id="gitalk"></div>
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1.5.0/dist/gitalk.min.js"></script>
+<script type="text/javascript">
+    var gitalk = new Gitalk({
+        clientID: '80b2453b6d5f37ad6225',
+        clientSecret: '43e99fa852795c9a7b3eb924b2558c64b84bbdeb',
+        id: window.location.pathname,
+        repo: 'nexmoe.github.io',
+        owner: 'nexmoe',
+        admin: 'nexmoe'
+    })
+    gitalk.render('gitalk')
+</script>
+</section>
+</div>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/mdui@0.4.3/dist/js/mdui.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+ 
+    <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+
+
+ 
+    <script src="https://cdn.jsdelivr.net/npm/smoothscroll-for-websites@1.4.9/SmoothScroll.min.js"></script>
+
+
+<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.15.8/build/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+<script src="/js/app.js?v=1566464349292"></script>
+<script src="https://cdn.jsdelivr.net/npm/lazysizes@5.1.0/lazysizes.min.js"></script>
+
+  
+
+
+
+
+
+</body>
+
+</html>
