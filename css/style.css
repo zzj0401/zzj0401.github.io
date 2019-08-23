@@ -737,6 +737,10 @@ article ul .mdui-checkbox {
 article ul .mdui-checkbox-icon {
   top: 4px;
 }
+article ul li img {
+  width: 20px;
+  height: 20px;
+}
 article li {
   line-height: 24px;
 }
