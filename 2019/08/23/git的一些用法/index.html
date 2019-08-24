@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html>
+
+<head><meta name="generator" content="Hexo 3.9.0">
+  
+  <title>日行千里</title>
+  <meta charset="UTF-8">
+  <meta name="description" content="程序猿日常">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  
+
+  <link rel="shortcut icon" href="/favicon.ico" type="image/png">
+  <meta name="description" content="git的一些用法">
+<meta property="og:type" content="article">
+<meta property="og:title" content="日行千里">
+<meta property="og:url" content="http://yoursite.com/2019/08/23/git的一些用法/index.html">
+<meta property="og:site_name" content="日行千里">
+<meta property="og:description" content="git的一些用法">
+<meta property="og:locale" content="zh-tw">
+<meta property="og:updated_time" content="2019-08-24T03:25:28.998Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="日行千里">
+<meta name="twitter:description" content="git的一些用法">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdui@0.4.3/dist/css/mdui.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.15.8/styles/atom-one-dark.css">
+   
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
+  
+  <link rel="stylesheet" href="//at.alicdn.com/t/font_1038733_0xvrvpg9c0r.css">
+  <link rel="stylesheet" href="../../../../css/style.css?v=1566617188394">
+</head>
+
+<body class="mdui-drawer-body-left">
+  
+  <div id="nexmoe-background">
+    <div class="nexmoe-bg" style="background-image: url(http://b-ssl.duitang.com/uploads/item/201708/24/20170824232705_Y2x58.jpeg)"></div>
+    <div class="mdui-appbar mdui-shadow-0">
+      <div class="mdui-toolbar">
+        <a mdui-drawer="{target: '#drawer', swipe: true}" title="menu" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">menu</i></a>
+        <div class="mdui-toolbar-spacer"></div>
+        <!--<a href="javascript:;" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">search</i></a>-->
+        <a href="../../../../index.html" title="shuo" class="mdui-btn mdui-btn-icon"><img src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=2003571102,4002116936&amp;fm=26&amp;gp=0.jpg"></a>
+       </div>
+    </div>
+  </div>
+  <div id="nexmoe-header">
+      <div class="nexmoe-drawer mdui-drawer" id="drawer">
+    <div class="nexmoe-avatar mdui-ripple">
+        <a href="../../../../index.html" title="shuo">
+            <img src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=2003571102,4002116936&amp;fm=26&amp;gp=0.jpg" alt="shuo">
+        </a>
+    </div>
+    <div class="nexmoe-count">
+        <div><span>Articles</span>9</div>
+        <div><span>Tags</span>1</div>
+        <div><span>Categories</span>1</div>
+    </div>
+    <ul class="nexmoe-list mdui-list" mdui-collapse="{accordion: true}">
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple" href="../../../../index.html" title="回到首页">
+            <i class="mdui-list-item-icon nexmoefont icon-home"></i>
+            <div class="mdui-list-item-content">
+                回到首页
+            </div>
+        </a>
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple" href="../../../../about.html" title="关于博客">
+            <i class="mdui-list-item-icon nexmoefont icon-info-circle"></i>
+            <div class="mdui-list-item-content">
+                关于博客
+            </div>
+        </a>
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple" href="../../../../PY.html" title="我的朋友">
+            <i class="mdui-list-item-icon nexmoefont icon-unorderedlist"></i>
+            <div class="mdui-list-item-content">
+                我的朋友
+            </div>
+        </a>
+        
+    </ul>
+    <aside id="nexmoe-sidebar">
+  
+  <div class="nexmoe-widget-wrap">
+    <h3 class="nexmoe-widget-title">Social</h3>
+    <div class="nexmoe-widget nexmoe-social">
+        <a class="mdui-ripple" href="https://space.bilibili.com/20238211" target="_blank" mdui-tooltip="{content: '哔哩哔哩'}" style="color: rgb(231, 106, 141);background-color: rgba(231, 106, 141, .15);">
+            <i class="nexmoefont icon-bilibili"></i>
+        </a><a class="mdui-ripple" href="https://github.com/zzj0401/zzj0401.github.io" target="_blank" mdui-tooltip="{content: 'GitHub'}" style="color: rgb(25, 23, 23);background-color: rgba(25, 23, 23, .15);">
+            <i class="nexmoefont icon-github"></i>
+        </a>
+    </div>
+</div>
+  
+  
+  <div class="nexmoe-widget-wrap">
+    <h3 class="nexmoe-widget-title">Categories</h3>
+    <div class="nexmoe-widget">
+      <ul class="category-list"></ul>
+    </div>
+  </div>
+
+
+  
+  
+  <div class="nexmoe-widget-wrap">
+    <h3 class="nexmoe-widget-title">Tagcloud</h3>
+    <div class="nexmoe-widget tagcloud">
+      
+    </div>
+  </div>
+
+  
+  
+  <div class="nexmoe-widget-wrap">
+    <h3 class="nexmoe-widget-title">Archive</h3>
+    <div class="nexmoe-widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../../../../archives/2019/08/">八月 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+</aside>
+    <div class="nexmoe-copyright">
+        &copy; 2019 shuo
+        Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+        & <a href="https://nexmoe.com/hexo-theme-nexmoe.html" target="_blank">Nexmoe</a>
+    </div>
+</div><!-- .nexmoe-drawer -->
+  </div>
+  <div id="nexmoe-content">
+    <div class="nexmoe-primary">
+        <div class="nexmoe-post">
+    <div class="nexmoe-post-cover"> 
+        
+            <img src="http://b-ssl.duitang.com/uploads/item/201708/24/20170824232705_Y2x58.jpeg">
+        
+        <h1></h1>
+    </div>
+  <div class="nexmoe-post-meta">
+    <a><i class="nexmoefont icon-calendar-fill"></i>2019年08月23日</a>
+    <a><i class="nexmoefont icon-areachart"></i>1.6k 字</a>
+    <a><i class="nexmoefont icon-time-circle-fill"></i>大概 7 分钟</a>
+    
+    
+  </div>
+  <article>
+    <h1 id="git的一些用法"><a href="#git的一些用法" class="headerlink" title="git的一些用法"></a>git的一些用法</h1><a id="more"></a>
+
+<p>学习网站：<a href="https://www.liaoxuefeng.com/wiki/896043488029600" target="_blank" rel="noopener">https://www.liaoxuefeng.com/wiki/896043488029600</a></p>
+<p>1.安装(window)：在Windows上使用Git，可以从Git官网直接<a href="https://git-scm.com/downloads" target="_blank" rel="noopener">下载安装程序</a>，（网速慢的同学请移步<a href="https://pan.baidu.com/s/1kU5OCOB#list/path=%2Fpub%2Fgit" target="_blank" rel="noopener">国内镜像</a>），然后按默认选项安装即可。</p>
+<p>安装完成后，可以开始菜单找到“Git”-&gt;“Git Bash”</p>
+<p>安装之后，设置用户名和邮箱：</p>
+<pre><code>$ git config --global user.name &quot;Your Name&quot;
+$ git config --global user.email &quot;email@example.com&quot;</code></pre><p>2.创建版本库：</p>
+<pre><code>$ mkdir learngit
+$ cd learngit
+$ pwd
+/Users/michael/learngit
+$ git init
+Initialized empty Git repository in /Users/michael/learngit/.git/</code></pre><p><code>pwd</code>命令:用于显示当前目录</p>
+<p><code>git init</code>命令:把这个目录变成Git可以管理的仓库</p>
+<p>注意：千万不要使用Windows自带的<strong>记事本</strong>编辑任何文本文件。</p>
+<p>3.添加文件到仓库：</p>
+<pre><code>git add readme.txt</code></pre><p>注意：文件要放在你建好的仓库的文件夹里。</p>
+<p>4.提交：</p>
+<pre><code>$ git commit -m &quot;wrote a readme file&quot;
+[master (root-commit) eaadf4e] wrote a readme file
+ 1 file changed, 2 insertions(+)
+ create mode 100644 readme.txt</code></pre><p><code>-m</code>后面输入的是本次提交的说明</p>
+<p>5.查看仓库状态：git status （可以告诉我们文件是否被修改）</p>
+<p>6.查看文件修改的内容：git diff</p>
+<p>7.查看历史记录（版本记录）：git log</p>
+<p>8.版本回退： git reset –hard HEAD^</p>
+<p>在Git中，用<code>HEAD</code>表示当前版本，上一个版本就是<code>HEAD^</code>，上上一个版本就是<code>HEAD^^</code>，当然往上100个版本写100个<code>^</code>比较容易数不过来，所以写成<code>HEAD~100</code>。</p>
+<p>9.回到原来的版本或特定版本：</p>
+<pre><code> git reset --hard 1094a //1094a是版本号，无需写全</code></pre><p>10.git的存储：工作区（git add)====&gt;stage(git commit)===&gt;master</p>
+<p>10.撤销工作区的修改：git cheout – read.txt (–前后都有空格)</p>
+<p>11.撤销stage的修改，使之回到工作区：</p>
+<p>git reset HEAD read.txt</p>
+<p>12.删除文件：在仓库文件夹删除文件后，工作区和版本库就不一致了，<code>git status</code>命令会立刻告诉你哪些文件被删除了</p>
+<p>此时，你可以（1）删除版本库的文件：git rm text.txt</p>
+<p>(2)把误删的文件恢复：git checkout – test.txt</p>
+<p>13.把本地仓库添加到远程仓库：</p>
+<p>关联：git remote add origin <a href="mailto:git@github.com" target="_blank" rel="noopener">git@github.com</a>:michaelliao/learngit.git</p>
+<p>（后面是你自己hithub仓库的名字)</p>
+<p>推送：git push -u origin master </p>
+<p>（是把当前分支<code>master</code>推送到远程)</p>
+<p>由于远程库是空的，我们第一次推送<code>master</code>分支时，加上了<code>-u</code>参数，Git不但会把本地的<code>master</code>分支内容推送的远程新的<code>master</code>分支，还会把本地的<code>master</code>分支和远程的<code>master</code>分支关联起来，在以后的推送或者拉取时就可以简化命令</p>
+<p>14 克隆远程库到本地库：git clone <a href="mailto:git@github.com" target="_blank" rel="noopener">git@github.com</a>:michaelliao/gitskills.git</p>
+<p>15.分支管理：</p>
+<p>创建分支并切换到该分支： git checkout -b dev</p>
+<p>查看当前分支：git branch</p>
+<pre><code>$ git branch
+* dev
+  master</code></pre><p>*号的为当前分支</p>
+<p>提交当前分支：git add read.txt</p>
+<p>切换回master分支：git checkout master</p>
+<p>将dev分支的工作成果合并到master：git merge dev</p>
+<p><code>git merge</code>命令用于合并指定分支到当前分支。</p>
+<p>删除dev分支：git branch -d dev</p>
+<p>16.解决冲突：当不同分支要合并时存在冲突内容，先用git status 查看冲突，在手动修改</p>
+<p>17.禁用快速合并：git merge –no-ff -m “merge with no-ff” dev</p>
+<p>合并分支时，加上<code>--no-ff</code>参数就可以用普通模式合并，合并后的历史有分支，能看出来曾经做过合并，而<code>fast forward</code>合并就看不出来曾经做过合并。</p>
+<p>18.存储工作现场：git stash</p>
+<p>​     查看存储的工作现场：git stash list</p>
+<p>​     恢复工作现场：git stash pop    (恢复的同时把stash内容也删了)</p>
+<p>​                                   git stash apply  (stash内容并不删除) </p>
+<p> 19.强制删除：git branch -D feature-vulcan</p>
+<p>20.查看远程库：git remote (加入 -v：显示更详细的信息)</p>
+<p>21.推送分支：git push origin dev</p>
+<p>22.多人协作：当从远程库clone时，只能看到本地的master分支，要在dev分支开发，就必须创建远程origin的dev分支到本地：</p>
+<p>git checkout -b dev origin/dev</p>
+<p>当多人推送产生冲突时，Git已经提示我们，先用<code>git pull</code>把最新的提交从<code>origin/dev</code>抓下来，然后，在本地合并，解决冲突，再推送：</p>
+<pre><code>$ git pull
+There is no tracking information for the current branch.
+Please specify which branch you want to merge with.
+See git-pull(1) for details.
+
+    git pull &lt;remote&gt; &lt;branch&gt;
+
+If you wish to set tracking information for this branch you can do so with:
+
+    git branch --set-upstream-to=origin/&lt;branch&gt; dev</code></pre><p><code>git pull</code>也失败了，原因是没有指定本地<code>dev</code>分支与远程<code>origin/dev</code>分支的链接，根据提示，设置<code>dev</code>和<code>origin/dev</code>的链接：</p>
+<p>git branch  –set-upstream-to=origin/dev dev</p>
+<p>再git pull，最后手动解决冲突后再提交，push</p>
+<p>因此，多人协作的工作模式通常是这样：</p>
+<ol>
+<li>首先，可以试图用<code>git push origin &lt;branch-name&gt;</code>推送自己的修改；</li>
+<li>如果推送失败，则因为远程分支比你的本地更新，需要先用<code>git pull</code>试图合并；</li>
+<li>如果合并有冲突，则解决冲突，并在本地提交；</li>
+<li>没有冲突或者解决掉冲突后，再用<code>git push origin &lt;branch-name&gt;</code>推送就能成功！</li>
+</ol>
+<p>如果<code>git pull</code>提示<code>no tracking information</code>，则说明本地分支和远程分支的链接关系没有创建，用命令<code>git branch --set-upstream-to &lt;branch-name&gt; origin/&lt;branch-name&gt;</code>。</p>
+<p>23.标签：</p>
+<p>创建：切换到要打上标签的分支上，再打上标签，也可以根据版本号打上标签：</p>
+<pre><code>git branch
+
+git tag v1.0
+
+git tag v 0.9 f52c</code></pre><p>查看：</p>
+<pre><code>git tag</code></pre><p>创建带有说明的标签：</p>
+<pre><code>git tag -a  v0.1 -, &quot;version 0.1 released&quot; 1094adb
+
+</code></pre><p>用命令<code>git show &lt;tagname&gt;</code>可以看到说明文字</p>
+<p>删除标签：</p>
+<pre><code>git tag -d v0.1</code></pre><p>推送某个标签：</p>
+<pre><code>git push origin v1.0</code></pre><p>一次性推送全部尚未推送到远程的本地标签：</p>
+<pre><code>git push origin --tags</code></pre><p>如果标签已经推送到远程，要删除远程标签就麻烦一点，先从本地删除：</p>
+<pre><code>$ git tag -d v0.9
+Deleted tag &#39;v0.9&#39; (was f52c633)</code></pre><p>然后，从远程删除。删除命令也是push，但是格式如下：</p>
+<pre><code>$ git push origin :refs/tags/v0.9
+To github.com:michaelliao/learngit.git
+ - [deleted]         v0.9</code></pre>
+  </article>
+  
+    
+<div class="nexmoe-post-copyright">
+<i class="mdui-list-item-icon nexmoefont icon-info-circle"></i>
+<strong>Author：</strong>shuo<br>
+<strong>Link：</strong><a href="http://yoursite.com/2019/08/23/git的一些用法/" title="http://yoursite.com/2019/08/23/git的一些用法/" target="_blank" rel="noopener">http://yoursite.com/2019/08/23/git的一些用法/</a><br>
+
+  <strong>版权声明：</strong>本文采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/deed.zh" target="_blank">CC BY-NC-SA 3.0 CN</a> 协议进行许可
+
+</div>
+
+
+  
+  <section class="nexmoe-comment">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1.5.0/dist/gitalk.min.css">
+<div id="gitalk"></div>
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1.5.0/dist/gitalk.min.js"></script>
+<script type="text/javascript">
+    var gitalk = new Gitalk({
+        clientID: '80b2453b6d5f37ad6225',
+        clientSecret: '43e99fa852795c9a7b3eb924b2558c64b84bbdeb',
+        id: window.location.pathname,
+        repo: 'nexmoe.github.io',
+        owner: 'nexmoe',
+        admin: 'nexmoe'
+    })
+    gitalk.render('gitalk')
+</script>
+</section>
+</div>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/mdui@0.4.3/dist/js/mdui.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+ 
+    <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+
+
+ 
+    <script src="https://cdn.jsdelivr.net/npm/smoothscroll-for-websites@1.4.9/SmoothScroll.min.js"></script>
+
+
+<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.15.8/build/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+<script src="../../../../js/app.js?v=1566617188403"></script>
+<script src="https://cdn.jsdelivr.net/npm/lazysizes@5.1.0/lazysizes.min.js"></script>
+
+  
+
+
+
+
+
+</body>
+
+</html>

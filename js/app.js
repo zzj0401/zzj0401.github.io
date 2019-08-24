@@ -37,6 +37,10 @@ $("#nexmoe-content img").each(function() {
   $(this).attr("src", "");
   $(this).addClass("lazyload");
   $(this).attr("referrerPolicy", "no-referrer");
+  var spanElement = document.createElement("span");
+  var txt = $(this).attr('alt')
+  spanElement.innerHTML = txt;
+  $(this).after(spanElement)
 });
 
 $("article:not(.nexmoe-py) img").each(function() {
