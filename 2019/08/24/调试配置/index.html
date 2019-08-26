@@ -11,24 +11,24 @@
   
 
   <link rel="shortcut icon" href="/favicon.ico" type="image/png">
-  <meta name="description" content="使用ESLint 、prettier、husky、lint-staged实现半自动化构建代码1.关于半自动化构建代码的实现过程： -&amp;gt; 待提交的代码-&amp;gt; git add 添加到暂存区-&amp;gt; 执行 git commit-&amp;gt; husky注册在git pre-commit的钩子调起 lint-staged-&amp;gt; lint-staged 取得所有被提交的文件依次执行写好的任务（E">
+  <meta name="description" content="使用ESLint 、prettier、husky、lint-staged实现半自动化构建代码">
 <meta property="og:type" content="article">
 <meta property="og:title" content="日行千里">
 <meta property="og:url" content="http://yoursite.com/2019/08/24/调试配置/index.html">
 <meta property="og:site_name" content="日行千里">
-<meta property="og:description" content="使用ESLint 、prettier、husky、lint-staged实现半自动化构建代码1.关于半自动化构建代码的实现过程： -&amp;gt; 待提交的代码-&amp;gt; git add 添加到暂存区-&amp;gt; 执行 git commit-&amp;gt; husky注册在git pre-commit的钩子调起 lint-staged-&amp;gt; lint-staged 取得所有被提交的文件依次执行写好的任务（E">
+<meta property="og:description" content="使用ESLint 、prettier、husky、lint-staged实现半自动化构建代码">
 <meta property="og:locale" content="zh-tw">
-<meta property="og:updated_time" content="2019-08-26T07:55:59.889Z">
+<meta property="og:updated_time" content="2019-08-26T07:58:59.355Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="日行千里">
-<meta name="twitter:description" content="使用ESLint 、prettier、husky、lint-staged实现半自动化构建代码1.关于半自动化构建代码的实现过程： -&amp;gt; 待提交的代码-&amp;gt; git add 添加到暂存区-&amp;gt; 执行 git commit-&amp;gt; husky注册在git pre-commit的钩子调起 lint-staged-&amp;gt; lint-staged 取得所有被提交的文件依次执行写好的任务（E">
+<meta name="twitter:description" content="使用ESLint 、prettier、husky、lint-staged实现半自动化构建代码">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdui@0.4.3/dist/css/mdui.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.15.8/styles/atom-one-dark.css">
    
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
   
   <link rel="stylesheet" href="//at.alicdn.com/t/font_1038733_0xvrvpg9c0r.css">
-  <link rel="stylesheet" href="../../../../css/style.css?v=1566806217578">
+  <link rel="stylesheet" href="../../../../css/style.css?v=1566806509385">
 </head>
 
 <body class="mdui-drawer-body-left">
@@ -127,13 +127,15 @@
     </div>
   <div class="nexmoe-post-meta">
     <a><i class="nexmoefont icon-calendar-fill"></i>2019年08月24日</a>
-    <a><i class="nexmoefont icon-areachart"></i>701 字</a>
+    <a><i class="nexmoefont icon-areachart"></i>711 字</a>
     <a><i class="nexmoefont icon-time-circle-fill"></i>大概 3 分钟</a>
     
     
   </div>
   <article>
-    <h1 id="使用ESLint-、prettier、husky、lint-staged实现半自动化构建代码"><a href="#使用ESLint-、prettier、husky、lint-staged实现半自动化构建代码" class="headerlink" title="使用ESLint 、prettier、husky、lint-staged实现半自动化构建代码"></a>使用ESLint 、prettier、husky、lint-staged实现半自动化构建代码</h1><p>1.关于半自动化构建代码的实现过程：</p>
+    <h1 id="使用ESLint-、prettier、husky、lint-staged实现半自动化构建代码"><a href="#使用ESLint-、prettier、husky、lint-staged实现半自动化构建代码" class="headerlink" title="使用ESLint 、prettier、husky、lint-staged实现半自动化构建代码"></a>使用ESLint 、prettier、husky、lint-staged实现半自动化构建代码</h1><a id="more"></a>
+
+<p>1.关于半自动化构建代码的实现过程：</p>
 <p>-&gt; 待提交的代码<br>-&gt; git add 添加到暂存区<br>-&gt; 执行 git commit<br>-&gt; husky注册在git pre-commit的钩子调起 lint-staged<br>-&gt; lint-staged 取得所有被提交的文件依次执行写好的任务（ESLint 和 Prettier）<br>-&gt; 如果有错误（没通过ESlint检查）则停止任务，等待下次commit，同时打印错误信息<br>-&gt; 成功提交</p>
 <p>2.介绍一下husky</p>
 <p><code>husky</code> 其实就是一个为 <code>git</code> 客户端增加 hook 的工具。hook可以理解成当执行如<code>git add、git commit</code>等git操作时的回调。将其安装到所在仓库的过程中它会自动在 <code>.git/</code> 目录下增加相应的钩子实现在 <code>pre-commit</code> 阶段就执行一系列流程保证每一个 commit 的正确性。部分在 cd <code>commit stage</code> 执行的命令可以挪动到本地执行，比如 lint 检查、比如单元测试。</p>
@@ -151,7 +153,7 @@
     },
 }</code></pre><p>lint-staged 的配置是：在 git 的待提交的文件中，在 app 目录下的所有 .js .jsx 都要执行三条命令。Lint-staged保证只对当前add到git stage区的文件进行扫描操作.</p>
 <p>在进行git commit的时候回触发到git hook进而执行precommit，而precommit脚本引用了lint-staged配置表明只对git add到stage区的文件进行扫描，具体lint-staged做了三件事情：1. 执行eslint –fix操作，进行扫描，若发现工具可修复的问题进行fix；2. 执行prettier脚本，这是对代码进行格式化的，3. 上述两项任务完成后对代码重新add。</p>
-<p>4.关于prettier：</p>
+<p>4.关使用prettier和ESLint：<a href="https://zzjshuo.club/2019/08/24/Prettier/" target="_blank" rel="noopener">https://zzjshuo.club/2019/08/24/Prettier/</a></p>
 <p>5.可以初始化ESLint</p>
 <pre><code>node_modules/.bin/eslint --init</code></pre><p>生成配置文件.eslintrc.json（大体如下）：</p>
 <pre><code>{
@@ -243,7 +245,7 @@
 <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.15.8/build/highlight.min.js"></script>
 <script>hljs.initHighlightingOnLoad();</script>
 
-<script src="../../../../js/app.js?v=1566806217582"></script>
+<script src="../../../../js/app.js?v=1566806509396"></script>
 <script src="https://cdn.jsdelivr.net/npm/lazysizes@5.1.0/lazysizes.min.js"></script>
 
   

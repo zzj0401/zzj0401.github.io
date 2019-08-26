@@ -27,7 +27,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
   
   <link rel="stylesheet" href="//at.alicdn.com/t/font_1038733_0xvrvpg9c0r.css">
-  <link rel="stylesheet" href="../../css/style.css?v=1566806217455">
+  <link rel="stylesheet" href="../../css/style.css?v=1566806509488">
 </head>
 
 <body class="mdui-drawer-body-left">
@@ -153,77 +153,14 @@
         </a>
         <div class="nexmoe-post-meta">
             <a><i class="nexmoefont icon-calendar-fill"></i>2019年08月24日</a>
-            <a><i class="nexmoefont icon-areachart"></i>701 字</a>
+            <a><i class="nexmoefont icon-areachart"></i>711 字</a>
             <a><i class="nexmoefont icon-time-circle-fill"></i>大概 3 分钟</a>
             
             
         </div>
         <article>
             
-            <h1 id="使用ESLint-、prettier、husky、lint-staged实现半自动化构建代码"><a href="#使用ESLint-、prettier、husky、lint-staged实现半自动化构建代码" class="headerlink" title="使用ESLint 、prettier、husky、lint-staged实现半自动化构建代码"></a>使用ESLint 、prettier、husky、lint-staged实现半自动化构建代码</h1><p>1.关于半自动化构建代码的实现过程：</p>
-<p>-&gt; 待提交的代码<br>-&gt; git add 添加到暂存区<br>-&gt; 执行 git commit<br>-&gt; husky注册在git pre-commit的钩子调起 lint-staged<br>-&gt; lint-staged 取得所有被提交的文件依次执行写好的任务（ESLint 和 Prettier）<br>-&gt; 如果有错误（没通过ESlint检查）则停止任务，等待下次commit，同时打印错误信息<br>-&gt; 成功提交</p>
-<p>2.介绍一下husky</p>
-<p><code>husky</code> 其实就是一个为 <code>git</code> 客户端增加 hook 的工具。hook可以理解成当执行如<code>git add、git commit</code>等git操作时的回调。将其安装到所在仓库的过程中它会自动在 <code>.git/</code> 目录下增加相应的钩子实现在 <code>pre-commit</code> 阶段就执行一系列流程保证每一个 commit 的正确性。部分在 cd <code>commit stage</code> 执行的命令可以挪动到本地执行，比如 lint 检查、比如单元测试。</p>
-<p>3.安装和配置husky和hook</p>
-<pre><code>npm i husky lint-staged --save-dev</code></pre><p>修改 <code>package.json</code> 添加 pre-commit 钩子和配置lint-staged</p>
-<pre><code>{
-  &quot;scripts&quot;: {
-    &quot;precommit&quot;: &quot;lint-staged&quot;
-  }
-  &quot;lint-staged&quot;: {   // lint-staged 配置
-        &quot;eslint --fix --ext .js&quot;,
-        &quot;prettier --write&quot;,
-        &quot;git add&quot;
-        ]
-    },
-}</code></pre><p>lint-staged 的配置是：在 git 的待提交的文件中，在 app 目录下的所有 .js .jsx 都要执行三条命令。Lint-staged保证只对当前add到git stage区的文件进行扫描操作.</p>
-<p>在进行git commit的时候回触发到git hook进而执行precommit，而precommit脚本引用了lint-staged配置表明只对git add到stage区的文件进行扫描，具体lint-staged做了三件事情：1. 执行eslint –fix操作，进行扫描，若发现工具可修复的问题进行fix；2. 执行prettier脚本，这是对代码进行格式化的，3. 上述两项任务完成后对代码重新add。</p>
-<p>4.关于prettier：</p>
-<p>5.可以初始化ESLint</p>
-<pre><code>node_modules/.bin/eslint --init</code></pre><p>生成配置文件.eslintrc.json（大体如下）：</p>
-<pre><code>{
-    &quot;env&quot;: { 
-        &quot;browser&quot;: true,
-        &quot;commonjs&quot;: true,
-        &quot;es6&quot;: true
-    },
-/*因为前端使用的React框架，eslint会对React等变量进行扫描会报出no-undefined的error，需要另其为global变量才能避开扫描。*/
-    &quot;globals&quot;:{
-    &quot;React&quot;:&quot;readable&quot;
-    },
-    &quot;extends&quot;: [&quot;eslint-config-ali&quot;,&quot;prettier&quot;, &quot;plugin:prettier/recommended&quot;],
-    &quot;parserOptions&quot;: {
-        &quot;ecmaFeatures&quot;: {
-            &quot;experimentalObjectRestSpread&quot;: true,
-            &quot;jsx&quot;: true
-        },
-        &quot;sourceType&quot;: &quot;module&quot;
-    },
-    &quot;plugins&quot;: [&quot;prettier&quot;],
-    &quot;rules&quot;: {
-        &quot;indent&quot;: [
-            &quot;error&quot;,
-            4
-        ],
-        &quot;linebreak-style&quot;: [
-            &quot;error&quot;,
-            &quot;windows&quot;
-        ],
-        &quot;quotes&quot;: [
-            &quot;error&quot;,
-            &quot;single&quot;
-        ],
-        &quot;semi&quot;: [
-            &quot;error&quot;,
-            &quot;always&quot;
-        ]
-    }
-}</code></pre><h3 id="调试配置"><a href="#调试配置" class="headerlink" title="调试配置"></a>调试配置</h3><p>配置肯定是不能拿来就用的，推荐先就只使用 <code>eslint:recommended</code> 版本。</p>
-<p>参考链接：</p>
-<p><a href="https://blog.csdn.net/u011521203/article/details/87546146" target="_blank" rel="noopener">https://blog.csdn.net/u011521203/article/details/87546146</a></p>
-<p><a href="https://segmentfault.com/a/1190000009546913" target="_blank" rel="noopener">https://segmentfault.com/a/1190000009546913</a></p>
-<p><a href="https://www.jianshu.com/p/cdd749c624d9" target="_blank" rel="noopener">https://www.jianshu.com/p/cdd749c624d9</a></p>
-
+            <h1 id="使用ESLint-、prettier、husky、lint-staged实现半自动化构建代码"><a href="#使用ESLint-、prettier、husky、lint-staged实现半自动化构建代码" class="headerlink" title="使用ESLint 、prettier、husky、lint-staged实现半自动化构建代码"></a>使用ESLint 、prettier、husky、lint-staged实现半自动化构建代码</h1>
             
         </article>
     </div>
@@ -429,7 +366,7 @@
 <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.15.8/build/highlight.min.js"></script>
 <script>hljs.initHighlightingOnLoad();</script>
 
-<script src="../../js/app.js?v=1566806217459"></script>
+<script src="../../js/app.js?v=1566806509500"></script>
 <script src="https://cdn.jsdelivr.net/npm/lazysizes@5.1.0/lazysizes.min.js"></script>
 
   
