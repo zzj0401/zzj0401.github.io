@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html>
+
+<head><meta name="generator" content="Hexo 3.9.0">
+  
+  <title>日行千里</title>
+  <meta charset="UTF-8">
+  <meta name="description" content="程序猿日常">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  
+
+  <link rel="shortcut icon" href="/favicon.ico" type="image/png">
+  <meta name="description" content="如何用hexo和github搭建自己的博客">
+<meta property="og:type" content="article">
+<meta property="og:title" content="日行千里">
+<meta property="og:url" content="http://yoursite.com/2019/08/27/用hexo和githun搭建博客/index.html">
+<meta property="og:site_name" content="日行千里">
+<meta property="og:description" content="如何用hexo和github搭建自己的博客">
+<meta property="og:locale" content="zh-tw">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/7277397-9f6d25167e1f2d23.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/709/format/webp">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/7277397-a916f2c6b2d400e7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/754/format/webp">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/7277397-5f03a6394dc2d475.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/569/format/webp">
+<meta property="og:image" content="c:/Users/Administrator/note/source/images/20190827/aliyun.png">
+<meta property="og:image" content="https://img-blog.csdn.net/20171211115312462?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvd29sZjY2OTk=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center">
+<meta property="og:image" content="https://img-blog.csdn.net/20171211115600817?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvd29sZjY2OTk=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center">
+<meta property="og:image" content="https://img-blog.csdn.net/2018102010520059?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dnc2h1bjYxNg==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70">
+<meta property="og:updated_time" content="2019-08-27T03:53:28.306Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="日行千里">
+<meta name="twitter:description" content="如何用hexo和github搭建自己的博客">
+<meta name="twitter:image" content="https://upload-images.jianshu.io/upload_images/7277397-9f6d25167e1f2d23.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/709/format/webp">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdui@0.4.3/dist/css/mdui.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.15.8/styles/atom-one-dark.css">
+   
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
+  
+  <link rel="stylesheet" href="//at.alicdn.com/t/font_1038733_0xvrvpg9c0r.css">
+  <link rel="stylesheet" href="../../../../css/style.css?v=1566878106868">
+</head>
+
+<body class="mdui-drawer-body-left">
+  
+  <div id="nexmoe-background">
+    <div class="nexmoe-bg" style="background-image: url(http://b-ssl.duitang.com/uploads/item/201708/24/20170824232705_Y2x58.jpeg)"></div>
+    <div class="mdui-appbar mdui-shadow-0">
+      <div class="mdui-toolbar">
+        <a mdui-drawer="{target: '#drawer', swipe: true}" title="menu" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">menu</i></a>
+        <div class="mdui-toolbar-spacer"></div>
+        <!--<a href="javascript:;" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">search</i></a>-->
+        <a href="../../../../index.html" title="shuo" class="mdui-btn mdui-btn-icon"><img src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=2003571102,4002116936&amp;fm=26&amp;gp=0.jpg"></a>
+       </div>
+    </div>
+  </div>
+  <div id="nexmoe-header">
+      <div class="nexmoe-drawer mdui-drawer" id="drawer">
+    <div class="nexmoe-avatar mdui-ripple">
+        <a href="../../../../index.html" title="shuo">
+            <img src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=2003571102,4002116936&amp;fm=26&amp;gp=0.jpg" alt="shuo">
+        </a>
+    </div>
+    <div class="nexmoe-count">
+        <div><span>Articles</span>11</div>
+        <div><span>Tags</span>0</div>
+        <div><span>Categories</span>0</div>
+    </div>
+    <ul class="nexmoe-list mdui-list" mdui-collapse="{accordion: true}">
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple" href="../../../../index.html" title="回到首页">
+            <i class="mdui-list-item-icon nexmoefont icon-home"></i>
+            <div class="mdui-list-item-content">
+                回到首页
+            </div>
+        </a>
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple" href="../../../../about.html" title="关于博客">
+            <i class="mdui-list-item-icon nexmoefont icon-info-circle"></i>
+            <div class="mdui-list-item-content">
+                关于博客
+            </div>
+        </a>
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple" href="../../../../PY.html" title="我的朋友">
+            <i class="mdui-list-item-icon nexmoefont icon-unorderedlist"></i>
+            <div class="mdui-list-item-content">
+                我的朋友
+            </div>
+        </a>
+        
+    </ul>
+    <aside id="nexmoe-sidebar">
+  
+  <div class="nexmoe-widget-wrap">
+    <h3 class="nexmoe-widget-title">Social</h3>
+    <div class="nexmoe-widget nexmoe-social">
+        <a class="mdui-ripple" href="https://space.bilibili.com/20238211" target="_blank" mdui-tooltip="{content: '哔哩哔哩'}" style="color: rgb(231, 106, 141);background-color: rgba(231, 106, 141, .15);">
+            <i class="nexmoefont icon-bilibili"></i>
+        </a><a class="mdui-ripple" href="https://github.com/zzj0401/zzj0401.github.io" target="_blank" mdui-tooltip="{content: 'GitHub'}" style="color: rgb(25, 23, 23);background-color: rgba(25, 23, 23, .15);">
+            <i class="nexmoefont icon-github"></i>
+        </a>
+    </div>
+</div>
+  
+  
+
+  
+  
+  
+  
+  <div class="nexmoe-widget-wrap">
+    <h3 class="nexmoe-widget-title">Archive</h3>
+    <div class="nexmoe-widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../../../../archives/2019/08/">八月 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+</aside>
+    <div class="nexmoe-copyright">
+        &copy; 2019 shuo
+        Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+        & <a href="https://nexmoe.com/hexo-theme-nexmoe.html" target="_blank">Nexmoe</a>
+    </div>
+</div><!-- .nexmoe-drawer -->
+  </div>
+  <div id="nexmoe-content">
+    <div class="nexmoe-primary">
+        <div class="nexmoe-post">
+    <div class="nexmoe-post-cover"> 
+        
+            <img src="http://b-ssl.duitang.com/uploads/item/201708/24/20170824232705_Y2x58.jpeg">
+        
+        <h1></h1>
+    </div>
+  <div class="nexmoe-post-meta">
+    <a><i class="nexmoefont icon-calendar-fill"></i>2019年08月27日</a>
+    <a><i class="nexmoefont icon-areachart"></i>2.3k 字</a>
+    <a><i class="nexmoefont icon-time-circle-fill"></i>大概 10 分钟</a>
+    
+    
+  </div>
+  <article>
+    <h1 id="如何用hexo和github搭建自己的博客"><a href="#如何用hexo和github搭建自己的博客" class="headerlink" title="如何用hexo和github搭建自己的博客"></a>如何用hexo和github搭建自己的博客</h1><a id="more"></a>
+
+<h2 id="1-在GitHub创建个人仓库"><a href="#1-在GitHub创建个人仓库" class="headerlink" title="1.在GitHub创建个人仓库"></a>1.在GitHub创建个人仓库</h2><p>在GitHub中注册自己的账号后(用于注册的邮箱一定要验证)，点击个人页面的New repository创建新仓库，此处注意：仓库名必须是自己注册时的用户名+.github.io</p>
+<p>例如：用户名：example</p>
+<p>那仓库名：example.github.io</p>
+<p>（仓库创建成功后不会立即生效，需要等上一段时间）</p>
+<h2 id="2-安装git"><a href="#2-安装git" class="headerlink" title="2.安装git"></a>2.安装git</h2><p>从Git官网下载：</p>
+<blockquote>
+<p><a href="https://git-scm.com/download/win" target="_blank" rel="noopener">Git - Downloading Package–win</a><br><a href="https://www.git-scm.com/download/mac" target="_blank" rel="noopener">Git - Downloading Package–mac</a><br><a href="https://www.git-scm.com/download/linux" target="_blank" rel="noopener">Git - Downloading Package–linux</a></p>
+</blockquote>
+<p>然后打开命令窗口（cmd)输入git -v，若有版本信息则是安装成功了。此时，右键的菜单里有Git Bash</p>
+<h2 id="3-将本地的Git与GitHub账号绑定"><a href="#3-将本地的Git与GitHub账号绑定" class="headerlink" title="3.将本地的Git与GitHub账号绑定"></a>3.将本地的Git与GitHub账号绑定</h2><p>右键唤出Git Bash，设置用户名和邮箱</p>
+<pre><code>git config --global user.name &quot;你的GitHub用户名&quot;
+git config --global user.email &quot;你的GitHub注册邮箱&quot;</code></pre><p>生成ssh密钥文件</p>
+<p>如果不是第一次使用git，可以通过cd ~/. ssh来检查本地已存在的ssh密钥</p>
+<p>如果是第一次，（通过cd ~/. ssh会提示No such file or directory ），则选择生成密钥：</p>
+<p><code>ssh-keygen -t rsa -C &quot;邮件地址&quot;</code></p>
+<p>然后连续3次回车，最终会生成一个文件在用户目录下</p>
+<p>复制里面的内容，打开你的github主页，进入个人设置 -&gt; SSH and GPG keys -&gt; New SSH key：</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/7277397-9f6d25167e1f2d23.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/709/format/webp"></p>
+<p>Title为标题，任意填即可，将刚刚复制的id_rsa.pub内容粘贴进去，最后点击Add SSH key。</p>
+<p>在 Git Bash 中检测 GitHub 公钥设置是否成功，输入 ssh <a href="mailto:git@github.com" target="_blank" rel="noopener">git@github.com</a></p>
+<p>如果提示<code>Are you sure you want to continue connecting (yes/no)?</code>，输入yes，然后会看到：</p>
+<blockquote>
+<p>Hi Bitnut! You’ve successfully authenticated, but GitHub does not provide shell access.</p>
+</blockquote>
+<p>如上则说明成功。</p>
+<h2 id="4-安装Node-js"><a href="#4-安装Node-js" class="headerlink" title="4.安装Node.js"></a>4.安装Node.js</h2><p>Node.js下载地址：<a href="https://nodejs.org/en/download/" target="_blank" rel="noopener">Download | Node.js</a></p>
+<p>下载安装成功后，打开命令窗口cmd，输入node -v,如果有版本号，则安装成功了。</p>
+<p>一般下载后默认装c盘，倘若装别的盘，在输入node -v后出现</p>
+<pre><code>&#39;c&#39; 不是内部或外部命令，也不是可运行的程序
+或批处理文件。</code></pre><p>这应该是环境变量没有配置：环境变量配置：</p>
+<p><a href="https://www.jianshu.com/p/957f5631faa9" target="_blank" rel="noopener">https://www.jianshu.com/p/957f5631faa9</a></p>
+<p>如果配置环境变量node -v还是保同样的错，则重启电脑（环境变量有时需要重启电脑才会生效）</p>
+<h2 id="5-安装Hexo"><a href="#5-安装Hexo" class="headerlink" title="5.安装Hexo"></a>5.安装Hexo</h2><p>Hexo就是我们的个人博客网站的框架，这里需要自己在电脑常里创建一个文件夹。</p>
+<p><em>注意不要在这个文件夹下面试用 Git 创建仓库，因为后面安装的主题内可能会带有 git 仓库，这样会导致包管理的混乱。</em></p>
+<p>可以随意命名，这里命名为 Blog，Hexo 框架和以后我们自己发布的网页都在保存在这个本地文件夹中。创建好后，不需要进入文件夹中，在文件夹的父目录直接唤出 Git Bash。</p>
+<p>使用npm命令安装Hexo，输入：</p>
+<blockquote>
+<p>npm install -g hexo-cli</p>
+</blockquote>
+<p>初始化我们的博客，输入：</p>
+<blockquote>
+<p>hexo init Blog</p>
+</blockquote>
+<p>注意，这里的命令都是作用在刚刚创建的Blog文件夹中。进入到文件夹中<br> 查看一下我们的目录结构：</p>
+<p><img src="https:////upload-images.jianshu.io/upload_images/7277397-a916f2c6b2d400e7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/754/format/webp" alt="img"></p>
+<p>为了检测我们的网站雏形，分别按顺序输入以下三条命令：</p>
+<pre><code>hexo new test_my_site //创建新文章
+hexo g//生成文件
+hexo s//本地部署</code></pre><p>这样我们在本地成功部署了我们的博客<br> 打开浏览器输入地址：</p>
+<p>localhost:4000</p>
+<p>关于常用的hexo指令：</p>
+<pre><code>hexo n &quot;我的博客&quot; == hexo new &quot;我的博客&quot; //新建文章
+hexo g == hexo generate //生成
+hexo s == hexo server //启动服务预览
+hexo d == hexo deploy //部署
+hexo clean //清除缓存
+hexo server -p 5000//更换端口</code></pre><h2 id="6-写博客"><a href="#6-写博客" class="headerlink" title="6.写博客"></a>6.写博客</h2><p>推荐使用Typora来编写博客，Typora支持使用HTML来编写带样式的文章，也支持插入不同语言的代码库。</p>
+<p>利用Typora编写博客,生成后缀为.md的文件，将该文件放入你的刚刚创建的Blog文件夹中</p>
+<p>（放置路径：Blog—source—_posts文件夹里面）</p>
+<h2 id="7-部署到Github上"><a href="#7-部署到Github上" class="headerlink" title="7.部署到Github上"></a>7.部署到Github上</h2><p>打开Blog根目录的_config.yml文件配置（注意：不是子目录theme下的_config.yml文件）：</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/7277397-5f03a6394dc2d475.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/569/format/webp" alt="img"></p>
+<p>repo可以写成:<a href="mailto:git@github.com" target="_blank" rel="noopener">git@github.com</a>:GitHub用户名/仓库名，保存该文件。</p>
+<p>以上的所有操作其实是在给 <code>hexo d</code> 这个命令做相应的配置，让 hexo 知道你要把 blog 部署在哪个位置，很显然，我们部署在我们GitHub的仓库里。最后安装Git部署插件，输入命令：</p>
+<blockquote>
+<p>npm install hexo-deployer-git –save</p>
+</blockquote>
+<p>完成后，我们分别输入三条命令：</p>
+<blockquote>
+<p>hexo clean<br>hexo g<br>hexo d</p>
+</blockquote>
+<p>第三条的 hexo d 就是部署网站命令，d是deploy的缩写。完成后，打开浏览器，在地址栏输入你的放置个人网站的仓库路径，即 <code>http://xxxx.github.io</code> 。其中的 xxxx 就是的GitHub用户名：</p>
+<p>你就会发现你的博客已经上线了，可以在网络上被访问了。</p>
+<ul>
+<li>注意：如果你前面操作的很快，那么你到这一步有可能没法访问，因为github那边给你的网站部署需要花费一些时间，大概需要最长半个小时的时间。</li>
+</ul>
+<h2 id="8-hexo设置域名"><a href="#8-hexo设置域名" class="headerlink" title="8.hexo设置域名"></a>8.hexo设置域名</h2><p>购买域名：进入阿里云（也可以是别的域名购买平台），在首页搜索框输入你喜欢的域名（可以是任意名称，字符），在出来的搜索结果页选择合适价位的域名进行购买：</p>
+<p><img src="C:/Users/Administrator/note/source/images/20190827/aliyun.png" alt></p>
+<p>购买域名后需要进行实名认证，填写完自己的实名信息审核通过后，就可以进行域名解析。</p>
+<p>进入控制台–域名控制台—进入域名解析列表，点击解析-添加记录。</p>
+<p><img src="https://img-blog.csdn.net/20171211115312462?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvd29sZjY2OTk=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center" alt="img"></p>
+<p>这里添加2条记录：记录类型都是A，主机记录一条是@，一条是www，解析线路都是默认，记录值是你电脑ping 你的域名的地址，TTL写10分钟。</p>
+<p><img src="https://img-blog.csdn.net/20171211115600817?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvd29sZjY2OTk=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center" alt="img"></p>
+<p>此时，还不可以用申请的域名访问博客，需要再hexo根目录创建CNAME文件，不带任何后缀，然后直接把你的域名信息，例如我的是zzjshuo.club，直接写在这个文件上，保存。</p>
+<p>在 github 上面，打开 <a href="http://username.github.io/" target="_blank" rel="noopener">username.github.io</a> 项目的（Settings）设置，然后在 <code>GitHub Pages</code>的 <code>Custom domain</code>设置里填上购买的域名。比如：</p>
+<p><img src="https://img-blog.csdn.net/2018102010520059?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dnc2h1bjYxNg==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="img"></p>
+<p>现在，你就可以通过这个域名访问Github博客了！</p>
+<h2 id="9-修改配置"><a href="#9-修改配置" class="headerlink" title="9.修改配置"></a>9.修改配置</h2><p>在你的博客文件夹的根目录里面的_config.yml可以修改你的配置</p>
+<p>例如，title：网站标题</p>
+<p>​             author：你的名字</p>
+<p>​              language:语言（en:英文，zh-tw：中文）</p>
+<p>其他配置请参考官网：<a href="https://hexo.io/zh-cn/docs/configuration" target="_blank" rel="noopener">https://hexo.io/zh-cn/docs/configuration</a></p>
+<h2 id="10-更改主题"><a href="#10-更改主题" class="headerlink" title="10.更改主题"></a>10.更改主题</h2><p>在<a href="https://hexo.io/themes/中选择喜欢的主题，可以直接下载到本地博客文件夹---themes文件夹里，也可以通过Git" target="_blank" rel="noopener">https://hexo.io/themes/中选择喜欢的主题，可以直接下载到本地博客文件夹---themes文件夹里，也可以通过Git</a> Bash（这里选择主题：<a href="https://github.com/litten/hexo-theme-yilia" target="_blank" rel="noopener">hexo-theme-yilia</a>）</p>
+<pre><code>git clone https://github.com/litten/hexo-theme-yilia.git themes/yilia</code></pre><p>git clone后是你的主题地址，这是将 yilia 主题下载到 Blog 目录的 themes 主题下的 yilia 文件夹中。</p>
+<p>然后，打开站点的_config.yml配置文件，将里面的</p>
+<pre><code>theme:landscape</code></pre><p>改为 </p>
+<pre><code>theme:yilia</code></pre><p>重新执行 </p>
+<pre><code>hexo g</code></pre><p>来重新生成。</p>
+<h2 id="11-关于Nexmoe主题的一些坑"><a href="#11-关于Nexmoe主题的一些坑" class="headerlink" title="11.关于Nexmoe主题的一些坑"></a>11.关于Nexmoe主题的一些坑</h2><p>Nexmoe是我自身使用的主题，关于这个主题的一些使用指南可以参考：<a href="https://docs.nexmoe.com/" target="_blank" rel="noopener">https://docs.nexmoe.com/</a></p>
+<p>下面是使用这个主题时遇到的一些坑儿</p>
+<p>11.1 .md文件里面的代码块不要规定语言，否则代码块会出现序号的代码块分块的现象，很不好看</p>
+<p>11.2如果想要你写的文章在首页是收起来的，点击标题跳到全文，则只需要在.md标题下面添加一句 </p>
+<pre><code>&lt;!--more--&gt;</code></pre><p>11.3 创建友情链接：</p>
+<p>在站点根目录下的 <code>source</code> 文件夹内创建一个 <code>.md</code> 文件，文件名和路径根据个人喜好决定，会决定渲染生成以后页面的路径。</p>
+<p>在文件中写入以下内容：</p>
+<pre><code>***
+title: links
+date: 2013/7/13 20:46:25
+layout: py
+permalink: PY.html
+***</code></pre><p>在 <code>.md</code> 中直接添加以下内容即可</p>
+<pre><code> [![标题](https://example.com/logo.png)](https://example.com/ &quot;标题&quot;)</code></pre><p>11.4 友情链接的样式</p>
+<p>添加头像下面的文字：在该主题的文件夹Nexmoe/source/js/app.js中修改：</p>
+<pre><code>$(&quot;#nexmoe-content img&quot;).each(function() {
+
+  $(this).attr(&quot;data-src&quot;, $(this).attr(&quot;src&quot;));
+
+  $(this).attr(&quot;src&quot;, &quot;&quot;);
+
+  $(this).addClass(&quot;lazyload&quot;);
+
+  $(this).attr(&quot;referrerPolicy&quot;, &quot;no-referrer&quot;);
+//添加span标签
+  var spanElement = document.createElement(&quot;span&quot;);
+//拿到alt中头像的名称
+  var txt = $(this).attr(&#39;alt&#39;)
+//插入spanElement中
+  spanElement.innerHTML = txt;
+//spanElement插入头像后面
+  $(this).after(spanElement)
+
+});
+
+
+
+$(&quot;article:not(.nexmoe-py) img&quot;).each(function() {
+
+  var element = document.createElement(&quot;a&quot;);
+
+  $(element).attr(&quot;data-fancybox&quot;, &quot;gallery&quot;);
+
+  $(element).attr(&quot;href&quot;, $(this).attr(&quot;data-src&quot;));
+
+  $(this).wrap(element);
+
+});</code></pre><p>头像的样式：Nexmoe/layout/py.ejs中修改：</p>
+<pre><code>.nexmoe-py p{
+
+      display: flex;
+
+      flex-direction: row;
+
+      align-items: center;
+
+      justify-content: left;
+
+
+
+    }
+
+    .nexmoe-py p a{
+
+      display: flex;
+
+     flex-direction: column;
+
+      align-items: center;
+
+      justify-content: center;
+
+     color:#000;
+
+      margin-right:20px;
+
+
+
+    }
+    .nexmoe-py p a:hover{
+
+     color:#ff4e6a;
+
+      border: 1px solid #eeeeee
+
+    }
+
+    .nexmoe-py p a img{
+
+      width: 120px;
+
+      height: 120px;
+
+      margin: 0 5px;
+
+      background: cover;
+
+    }
+
+</code></pre><h2 id="12-参考链接："><a href="#12-参考链接：" class="headerlink" title="12.参考链接："></a>12.参考链接：</h2><p>1.<a href="https://www.jianshu.com/p/860d3e0fff58" target="_blank" rel="noopener">https://www.jianshu.com/p/860d3e0fff58</a></p>
+<p>2.<a href="https://blog.csdn.net/wolf6699/article/details/78653547" target="_blank" rel="noopener">https://blog.csdn.net/wolf6699/article/details/78653547</a></p>
+<p>3.<a href="https://www.cnblogs.com/xuwujing/p/7629965.html" target="_blank" rel="noopener">https://www.cnblogs.com/xuwujing/p/7629965.html</a></p>
+<p>4.<a href="https://www.cnblogs.com/penglei-it/p/hexo_domain_name.html" target="_blank" rel="noopener">https://www.cnblogs.com/penglei-it/p/hexo_domain_name.html</a></p>
+
+  </article>
+  
+    
+<div class="nexmoe-post-copyright">
+<i class="mdui-list-item-icon nexmoefont icon-info-circle"></i>
+<strong>Author：</strong>shuo<br>
+<strong>Link：</strong><a href="http://yoursite.com/2019/08/27/用hexo和githun搭建博客/" title="http://yoursite.com/2019/08/27/用hexo和githun搭建博客/" target="_blank" rel="noopener">http://yoursite.com/2019/08/27/用hexo和githun搭建博客/</a><br>
+
+  <strong>版权声明：</strong>本文采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/deed.zh" target="_blank">CC BY-NC-SA 3.0 CN</a> 协议进行许可
+
+</div>
+
+
+  
+  <section class="nexmoe-comment">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1.5.0/dist/gitalk.min.css">
+<div id="gitalk"></div>
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1.5.0/dist/gitalk.min.js"></script>
+<script type="text/javascript">
+    var gitalk = new Gitalk({
+        clientID: '80b2453b6d5f37ad6225',
+        clientSecret: '43e99fa852795c9a7b3eb924b2558c64b84bbdeb',
+        id: window.location.pathname,
+        repo: 'nexmoe.github.io',
+        owner: 'nexmoe',
+        admin: 'nexmoe'
+    })
+    gitalk.render('gitalk')
+</script>
+</section>
+</div>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/mdui@0.4.3/dist/js/mdui.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+ 
+    <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+
+
+ 
+    <script src="https://cdn.jsdelivr.net/npm/smoothscroll-for-websites@1.4.9/SmoothScroll.min.js"></script>
+
+
+<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.15.8/build/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+<script src="../../../../js/app.js?v=1566878106877"></script>
+<script src="https://cdn.jsdelivr.net/npm/lazysizes@5.1.0/lazysizes.min.js"></script>
+
+  
+
+
+
+
+
+</body>
+
+</html>
