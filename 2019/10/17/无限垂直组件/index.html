@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html>
+
+<head><meta name="generator" content="Hexo 3.9.0">
+  
+  <title>无限垂直滚动组件 - 日行千里</title>
+  <meta charset="UTF-8">
+  <meta name="description" content="程序猿日常">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  
+
+  <link rel="shortcut icon" href="/favicon.ico" type="image/png">
+  <meta name="description" content="无限垂直组件">
+<meta property="og:type" content="article">
+<meta property="og:title" content="无限垂直滚动组件">
+<meta property="og:url" content="http://yoursite.com/2019/10/17/无限垂直组件/index.html">
+<meta property="og:site_name" content="日行千里">
+<meta property="og:description" content="无限垂直组件">
+<meta property="og:locale" content="zh-tw">
+<meta property="og:updated_time" content="2019-10-17T09:11:35.044Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="无限垂直滚动组件">
+<meta name="twitter:description" content="无限垂直组件">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdui@0.4.3/dist/css/mdui.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.15.8/styles/atom-one-dark.css">
+   
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
+  
+  <link rel="stylesheet" href="//at.alicdn.com/t/font_1038733_0xvrvpg9c0r.css">
+  <link rel="stylesheet" href="../../../../css/style.css?v=1571303568381">
+</head>
+
+<body class="mdui-drawer-body-left">
+  
+  <div id="nexmoe-background">
+    <div class="nexmoe-bg" style="background-image: url(http://b-ssl.duitang.com/uploads/item/201708/24/20170824232705_Y2x58.jpeg)"></div>
+    <div class="mdui-appbar mdui-shadow-0">
+      <div class="mdui-toolbar">
+        <a mdui-drawer="{target: '#drawer', swipe: true}" title="menu" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">menu</i></a>
+        <div class="mdui-toolbar-spacer"></div>
+        <!--<a href="javascript:;" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">search</i></a>-->
+        <a href="../../../../index.html" title="shuo" class="mdui-btn mdui-btn-icon"><img src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=2003571102,4002116936&amp;fm=26&amp;gp=0.jpg"></a>
+       </div>
+    </div>
+  </div>
+  <div id="nexmoe-header">
+      <div class="nexmoe-drawer mdui-drawer" id="drawer">
+    <div class="nexmoe-avatar mdui-ripple">
+        <a href="../../../../index.html" title="shuo">
+            <img src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=2003571102,4002116936&amp;fm=26&amp;gp=0.jpg" alt="shuo">
+        </a>
+    </div>
+    <div class="nexmoe-count">
+        <div><span>Articles</span>16</div>
+        <div><span>Tags</span>0</div>
+        <div><span>Categories</span>0</div>
+    </div>
+    <ul class="nexmoe-list mdui-list" mdui-collapse="{accordion: true}">
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple" href="../../../../index.html" title="回到首页">
+            <i class="mdui-list-item-icon nexmoefont icon-home"></i>
+            <div class="mdui-list-item-content">
+                回到首页
+            </div>
+        </a>
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple" href="../../../../about.html" title="关于博客">
+            <i class="mdui-list-item-icon nexmoefont icon-info-circle"></i>
+            <div class="mdui-list-item-content">
+                关于博客
+            </div>
+        </a>
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple" href="../../../../PY.html" title="我的朋友">
+            <i class="mdui-list-item-icon nexmoefont icon-unorderedlist"></i>
+            <div class="mdui-list-item-content">
+                我的朋友
+            </div>
+        </a>
+        
+    </ul>
+    <aside id="nexmoe-sidebar">
+  
+  <div class="nexmoe-widget-wrap">
+    <h3 class="nexmoe-widget-title">Social</h3>
+    <div class="nexmoe-widget nexmoe-social">
+        <a class="mdui-ripple" href="https://space.bilibili.com/20238211" target="_blank" mdui-tooltip="{content: '哔哩哔哩'}" style="color: rgb(231, 106, 141);background-color: rgba(231, 106, 141, .15);">
+            <i class="nexmoefont icon-bilibili"></i>
+        </a><a class="mdui-ripple" href="https://github.com/zzj0401/zzj0401.github.io" target="_blank" mdui-tooltip="{content: 'GitHub'}" style="color: rgb(25, 23, 23);background-color: rgba(25, 23, 23, .15);">
+            <i class="nexmoefont icon-github"></i>
+        </a>
+    </div>
+</div>
+  
+  
+
+  
+  
+  
+  
+  <div class="nexmoe-widget-wrap">
+    <h3 class="nexmoe-widget-title">Archive</h3>
+    <div class="nexmoe-widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../../../../archives/2019/10/">十月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../../../archives/2019/08/">八月 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+</aside>
+    <div class="nexmoe-copyright">
+        &copy; 2019 shuo
+        Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+        & <a href="https://nexmoe.com/hexo-theme-nexmoe.html" target="_blank">Nexmoe</a>
+    </div>
+</div><!-- .nexmoe-drawer -->
+  </div>
+  <div id="nexmoe-content">
+    <div class="nexmoe-primary">
+        <div class="nexmoe-post">
+    <div class="nexmoe-post-cover"> 
+        
+        <img src="http://img5.imgtn.bdimg.com/it/u=3044118127,3359517818&fm=26&gp=0.jpg">
+        
+        <h1>无限垂直滚动组件</h1>
+    </div>
+  <div class="nexmoe-post-meta">
+    <a><i class="nexmoefont icon-calendar-fill"></i>2019年10月17日</a>
+    <a><i class="nexmoefont icon-areachart"></i>1.5k 字</a>
+    <a><i class="nexmoefont icon-time-circle-fill"></i>大概 9 分钟</a>
+    
+    
+  </div>
+  <article>
+    <h1 id="无限垂直组件"><a href="#无限垂直组件" class="headerlink" title="无限垂直组件"></a>无限垂直组件</h1><a id="more"></a>
+
+<h2 id="1-数据："><a href="#1-数据：" class="headerlink" title="1.数据："></a>1.数据：</h2><pre><code>const formData = {
+  tableHead: [
+    &#39;国家&#39;,
+    &#39;买家公司&#39;,
+    &#39;价格条款&#39;,
+    &#39;金额&#39;,
+    &#39;申请出口时间&#39;
+  ],
+  tableData: [
+    {
+      id: 0,
+      country: &#39;美国&#39;,
+      company: &#39;sssa&#39;,
+      price_term: &#39;FFF&#39;,
+      amount: 720000,
+      time: &#39;2019-01-01&#39;
+    },
+    {
+      id: 1,
+      country: &#39;英国&#39;,
+      company: &#39;sssa&#39;,
+      price_term: &#39;FFF&#39;,
+      amount: 720000,
+      time: &#39;2019-01-01&#39;
+    },
+    {
+      id: 2,
+      country: &#39;意大利&#39;,
+      company: &#39;sssa&#39;,
+      price_term: &#39;FFF&#39;,
+      amount: 720000,
+      time: &#39;2019-01-01&#39;
+    },
+    {
+      id: 3,
+      country: &#39;德国&#39;,
+      company: &#39;sssa&#39;,
+      price_term: &#39;FFF&#39;,
+      amount: 720000,
+      time: &#39;2019-01-01&#39;
+    },
+    {
+      id: 4,
+      country: &#39;澳大利亚&#39;,
+      company: &#39;sssa&#39;,
+      price_term: &#39;FFF&#39;,
+      amount: 720000,
+      time: &#39;2019-01-01&#39;
+    },
+    {
+      id: 5,
+      country: &#39;韩国&#39;,
+      company: &#39;sssa&#39;,
+      price_term: &#39;FFF&#39;,
+      amount: 720000,
+      time: &#39;2019-01-01&#39;
+    },
+    {
+      id: 6,
+      country: &#39;日本&#39;,
+      company: &#39;sssa&#39;,
+      price_term: &#39;FFF&#39;,
+      amount: 720000,
+      time: &#39;2019-01-01&#39;
+    },
+    {
+      id: 7,
+      country: &#39;阿鲁巴&#39;,
+      company: &#39;sssa&#39;,
+      price_term: &#39;FFF&#39;,
+      amount: 720000,
+      time: &#39;2019-01-01&#39;
+    },
+    {
+      id: 8,
+      country: &#39;越南&#39;,
+      company: &#39;sssa&#39;,
+      price_term: &#39;FFF&#39;,
+      amount: 720000,
+      time: &#39;2019-01-01&#39;
+    },
+    {
+      id: 9,
+      country: &#39;日本&#39;,
+      company: &#39;kkll&#39;,
+      price_term: &#39;FFF&#39;,
+      amount: 920000,
+      time: &#39;2019-01-01&#39;
+    },
+    {
+      id: 10,
+      country: &#39;阿鲁巴&#39;,
+      company: &#39;seig&#39;,
+      price_term: &#39;FFF&#39;,
+      amount: 820000,
+      time: &#39;2019-01-01&#39;
+    },
+    {
+      id: 11,
+      country: &#39;越南&#39;,
+      company: &#39;ee*h&#39;,
+      price_term: &#39;FFF&#39;,
+      amount: 620000,
+      time: &#39;2019-01-01&#39;
+    },
+  ]
+}
+export default formData</code></pre><h2 id="2-less文件"><a href="#2-less文件" class="headerlink" title="2.less文件"></a>2.less文件</h2><pre><code>.formBox{
+  /* width: auto; */
+  height: 500px;
+  color: white;
+  background:#2b2e3d;
+  border-radius: 2px;
+  &amp;__title{
+    padding-top:20px;
+    padding-left:20px;
+    font-size: 20px;
+    font-weight: 600;
+    color: white;
+    line-height: 40px;
+ }
+ &amp;__table{
+   width:95%;
+   line-height: 40px;
+   margin: 0 auto;
+   &amp;--head{
+     display: flex;
+     flex-direction: row;
+     border-bottom: 1px solid white;
+   div{
+     width: 100px;
+     text-align: center;
+   }
+   }
+   &amp;--contain{
+    display: flex;
+    flex-direction: row;
+    div{
+      width: 100px;
+      text-align: center;
+    }
+   }
+ }
+}
+
+.datalist{
+
+  height:280px;
+   overflow: hidden;
+
+
+
+}
+.notrans{
+  position: relative;
+
+
+}
+.trans{
+  position: relative;
+  transition: all 1s ease 1s;
+}</code></pre><h2 id="3-具体实现"><a href="#3-具体实现" class="headerlink" title="3.具体实现"></a>3.具体实现</h2><h3 id="无动画效果"><a href="#无动画效果" class="headerlink" title="无动画效果"></a>无动画效果</h3><pre><code>/* eslint-disable react/destructuring-assignment */
+import React from &#39;react&#39;
+import styles from &#39;./InfinteVerticalScroll.less&#39;
+
+/*
+props:dataSource:{
+  tableHead:表头数据
+  tableData：表单数据
+}
+speed:垂直滚动速度
+title：表格标题
+delay:延时
+direction:方向 up|down
+*/
+let tt
+// const { tableHead, tableData } = testData
+class InfinteVerticalScroll extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      tableData_data: this.props.dataSource.tableData,
+      isArea: false,
+    }
+    this.refList = React.createRef()
+  }
+
+  componentDidMount() {
+    console.log(&#39;-------------------&#39;)
+    console.log(this.refList)
+    console.log(&#39;-------------------&#39;)
+    this.scrollData()
+    document.addEventListener(&#39;mouseover&#39;, this.handleMοuseOver, false)
+  }
+
+  componentWillUnmount() {
+    document.removeEventListener(&#39;mouseover&#39;, this.handleMοuseOver, false)
+  }
+
+  handleMοuseOver = (event) =&gt; {
+    if (this.node.contains(event.target)) {
+      this.setState({
+        isArea: true
+      })
+      clearInterval(tt)
+      return
+    }
+    if (this.state.isArea) {
+      this.setState({
+        isArea: false
+      })
+      this.debounce(this.scrollData(), 3000)
+    }
+  }
+
+  scrollData = () =&gt; {
+    const { speed, dataSource } = this.props
+    const { tableData } = dataSource
+    if (this.state.isArea === false) {
+      clearInterval(tt)
+      tt = setInterval(() =&gt; {
+        const newData = tableData.pop()
+
+        tableData.unshift(newData)
+
+        this.setState({
+          tableData_data: tableData
+        })
+        if (this.state.isArea) {
+          clearInterval(tt)
+        }
+      }, speed * 1000);
+      if (this.state.isArea) {
+        clearInterval(tt)
+      }
+    }
+  }
+
+  handleChangeData = () =&gt; {
+  }
+
+  debounce = (fn, delay) =&gt; {
+    let timerId;
+    return (...args) =&gt; {
+      if (timerId) {
+        clearInterval(timerId)
+      }
+      timerId = setTimeout(() =&gt; {
+        fn(...args);
+        timerId = null;
+      }, delay)
+    }
+  }
+
+  handleStop = () =&gt; {
+    this.setState({
+      isArea: true
+    })
+    clearInterval(tt)
+  }
+
+  render() {
+    const { tableData_data } = this.state
+    const { dataSource, title } = this.props
+    const { tableHead } = dataSource
+    const arr = []
+    let count = 0
+    // eslint-disable-next-line no-restricted-syntax
+    for (const x in tableData_data[0]) {
+      if (x !== &#39;id&#39;) {
+        arr[count += 1] = x
+      }
+    }
+    const formattableHeadData = (datasource) =&gt; datasource.map((item, index) =&gt; Object.assign(item, { id: index, data: item }))
+    return (
+
+      &lt;div
+        className={styles.formBox}
+        ref={(ref) =&gt; { this.node = ref }}
+        onMouseOver={this.handleChangeData}
+        onFocus={this.handleStop}
+      &gt;
+        &lt;h5 className={styles.formBoxTitle}&gt;{title}&lt;/h5&gt;
+        &lt;div className={styles.formBoxTable}&gt;
+          &lt;div className={styles.formBoxTableHead}&gt;
+            {formattableHeadData(tableHead).map((item) =&gt; (
+              &lt;div key={item.id}&gt;{item.data}&lt;/div&gt;
+            )
+            )}
+          &lt;/div&gt;
+          &lt;div&gt;
+          {tableData_data.map((item) =&gt; (
+            &lt;div className={styles.formBoxTableContain} key={item.id} ref={this.refList}&gt;
+              {formattableHeadData(arr).map((item_i) =&gt; (
+                &lt;div key={item_i.id}&gt;{item[item_i.data]}&lt;/div&gt;
+              ))}
+            &lt;/div&gt;
+          ))}
+          &lt;/div&gt;
+        &lt;/div&gt;
+
+      &lt;/div&gt;
+
+    )
+  }
+}
+export default InfinteVerticalScroll</code></pre><h3 id="有动画效果"><a href="#有动画效果" class="headerlink" title="有动画效果"></a>有动画效果</h3><pre><code>/* eslint-disable react/destructuring-assignment */
+
+import React from &#39;react&#39;
+import styles from &#39;./InfinteVerticalScroll.less&#39;
+
+/*
+props:dataSource:{
+  tableHead:表头数据
+  tableData：表单数据
+}
+speed:垂直滚动速度,默认2s
+title：表格标题
+delay:延时,默认2s
+direction:方向 up|down 默认down
+*/
+
+let scrollInterval
+
+// const { tableHead, tableData } = testData
+
+class NewTry extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = ({
+      tableData_data: this.props.dataSource.tableData,
+      listMarginTop: &#39;-40px&#39;,
+      trans: true,
+      istimeOut: true
+    })
+  }
+
+  componentDidMount() {
+    this.handleScroll()
+  }
+
+  handleStop = () =&gt; {
+    clearInterval(scrollInterval)
+  }
+
+
+  // handleDownScroll = () =&gt; {
+  //   this.handleStop();
+  //   this.scrollDowm();
+  //   scrollInterval = setInterval(this.scrollDowm, 3000)
+
+  // }
+
+  // handleUpScroll = () =&gt; {
+  //   this.handleStop()
+  //   this.scrollUp()
+  //   scrollInterval = setInterval(this.scrollUp, 3000)
+  // }
+
+  // scrollDowm = () =&gt; {
+  //   const { tableData_data } = this.state;
+  //   this.setState({
+  //     trans: true,
+  //     listMarginTop: &#39;0px&#39;
+  //   });
+  //   setTimeout(() =&gt; {
+  //     tableData_data.unshift(tableData_data[tableData_data.length - 1])
+  //     tableData_data.pop();
+  //     this.setState({
+  //       trans: false,
+  //       tableData_data,
+  //       listMarginTop: &#39;-40px&#39;,
+  //     })
+  //     // this.forceUpdate()
+  //   }, 2000)
+
+  // }
+
+  // scrollUp = () =&gt; {
+  //   const { tableData_data } = this.state;
+  //   const data = tableData_data
+  //   this.setState({
+  //     trans: true,
+  //     listMarginTop: &#39;-80px&#39;,
+  //     tableData_data: data
+  //   })
+  //   setTimeout(() =&gt; {
+  //     const data2 = tableData_data
+  //     data2.push(this.state.tableData_data[0])
+  //     data2.shift();
+  //     this.setState({
+  //       trans: false,
+  //       tableData_data: data2,
+  //       listMarginTop: &#39;-40px&#39;
+  //     })
+  //   }, 2000)
+  // }
+  handleScroll = () =&gt; {
+    const { speed = 2 } = this.props
+    this.handleStop()
+    this.scrollMethod()
+    scrollInterval = setInterval(this.scrollMethod, speed * 1000)
+  }
+
+  scrollMethod = () =&gt; {
+    const { direction, delay = 2 } = this.props
+    const { tableData_data } = this.state;
+    const moveSpace = direction === &#39;up&#39; ? &#39;-80px&#39; : &#39;0px&#39;
+    this.setState({
+      trans: true,
+      listMarginTop: moveSpace,
+    })
+    setTimeout(() =&gt; {
+      if (direction === &#39;up&#39;) {
+        tableData_data.push(this.state.tableData_data[0])
+        tableData_data.shift();
+      } else {
+        tableData_data.unshift(tableData_data[tableData_data.length - 1])
+        tableData_data.pop();
+      }
+      this.setState({
+        trans: false,
+        tableData_data,
+        listMarginTop: &#39;-40px&#39;
+      })
+    }, delay * 1000)
+  }
+
+
+  handleMouseIn = () =&gt; {
+    this.handleStop()
+
+  }
+
+
+  handleMouseLeave = () =&gt; {
+    if (this.state.istimeOut) {
+      this.setState({
+        istimeOut: false
+      }, () =&gt; {
+        setTimeout(this.setTime, 2000)
+        // this.handleLeave()
+      })
+
+    }
+  }
+
+  setTime = () =&gt; {
+    if (!this.setState.istimeOut) {
+      this.setState({
+        istimeOut: true
+      })
+      this.handleScroll()
+    }
+  }
+
+  render() {
+    const { tableData_data } = this.state
+    const { dataSource, title } = this.props
+    const { tableHead } = dataSource
+    const arr = []
+    let count = 0
+    const csty = this.state.trans ? styles.trans : styles.notrans
+
+    // eslint-disable-next-line no-restricted-syntax
+    for (const x in tableData_data[0]) {
+      if (x !== &#39;id&#39;) {
+        arr[count += 1] = x
+      }
+    }
+    const formattableHeadData = (datasource) =&gt; datasource.map((item, index) =&gt; Object.assign(item, { id: index, data: item }))
+    return (
+
+      &lt;div
+        className={styles.formBox}
+        // ref={(ref) =&gt; { this.node = ref }}
+        onMouseMove={this.handleStop}
+        onFocus={this.handleStop}
+        onMouseLeave={this.handleMouseLeave}
+      &gt;
+        &lt;h5 className={styles.formBoxTitle}&gt;{title}&lt;/h5&gt;
+        &lt;div className={styles.formBoxTable}&gt;
+          &lt;div className={styles.formBoxTableHead}&gt;
+            {formattableHeadData(tableHead).map((item) =&gt; (
+              &lt;div key={item.id}&gt;{item.data}&lt;/div&gt;
+            )
+            )}
+          &lt;/div&gt;
+          &lt;div
+            className={styles.datalist}
+            id=&quot;scrollList&quot;
+          &gt;
+            &lt;div className={csty} style={{ marginTop: this.state.listMarginTop }}&gt;
+              {tableData_data.map((item) =&gt; (
+                &lt;div className={styles.formBoxTableContain} key={item.id}&gt;
+                  {formattableHeadData(arr).map((item_i) =&gt; (
+                    &lt;div key={item_i.id}&gt;{item[item_i.data]}&lt;/div&gt;
+                  ))}
+                &lt;/div&gt;
+              ))}
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+
+    )
+
+  }
+
+}
+
+export default NewTry</code></pre><p>应用：</p>
+<pre><code>import React from &#39;react&#39;
+import InfinteVerticalScroll from &#39;../../components/InfinteVerticalScroll/InfinteVerticalScroll&#39;
+// import Newtry from &#39;../../components/InfinteVerticalScroll/Newtry&#39;
+import testData from &#39;../../../testData&#39;
+
+const InfinteScroll =()=&gt;(
+  &lt;div&gt;
+  &lt;InfinteVerticalScroll dataSource={testData} speed={3} title=&#39;最新海关数据&#39; direction=&#39;up&#39; delay={2} /&gt;
+  {/* &lt;Newtry dataSource={testData} speed={3} title=&#39;最新海关数据&#39; direction=&#39;up&#39; delay={2} /&gt; */}
+
+  &lt;/div&gt;
+)
+export default InfinteScroll</code></pre><h2 id="4-关于setInterval的弊端和解决方式"><a href="#4-关于setInterval的弊端和解决方式" class="headerlink" title="4.关于setInterval的弊端和解决方式"></a>4.关于setInterval的弊端和解决方式</h2><p><a href="https://www.cnblogs.com/gold404/p/10011675.html" target="_blank" rel="noopener">https://www.cnblogs.com/gold404/p/10011675.html</a></p>
+<p><a href="https://blog.csdn.net/runOnWay/article/details/80900437" target="_blank" rel="noopener">https://blog.csdn.net/runOnWay/article/details/80900437</a></p>
+<p>setInterval如果不及时清除定时器，可能会出现调用速度越来越快的情况</p>
+<p>解决方式，用setTimeout代替setInterval</p>
+<pre><code>var i=0
+function show(){
+console.log(i);
+i++;
+if(i&lt;5){
+setTimeout(show,1000)
+}
+}
+show()</code></pre><p>上面也就是做了一个setTimeout循环，让setTimeout也可以达到setInterval()无限循环的效果，但是不会出现setInterval()越来越快的问题。</p>
+
+  </article>
+  
+    
+<div class="nexmoe-post-copyright">
+<i class="mdui-list-item-icon nexmoefont icon-info-circle"></i>
+<strong>Author：</strong>shuo<br>
+<strong>Link：</strong><a href="http://yoursite.com/2019/10/17/无限垂直组件/" title="http://yoursite.com/2019/10/17/无限垂直组件/" target="_blank" rel="noopener">http://yoursite.com/2019/10/17/无限垂直组件/</a><br>
+
+  <strong>版权声明：</strong>本文采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/deed.zh" target="_blank">CC BY-NC-SA 3.0 CN</a> 协议进行许可
+
+</div>
+
+
+  
+  <section class="nexmoe-comment">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1.5.0/dist/gitalk.min.css">
+<div id="gitalk"></div>
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1.5.0/dist/gitalk.min.js"></script>
+<script type="text/javascript">
+    var gitalk = new Gitalk({
+        clientID: '80b2453b6d5f37ad6225',
+        clientSecret: '43e99fa852795c9a7b3eb924b2558c64b84bbdeb',
+        id: window.location.pathname,
+        repo: 'nexmoe.github.io',
+        owner: 'nexmoe',
+        admin: 'nexmoe'
+    })
+    gitalk.render('gitalk')
+</script>
+</section>
+</div>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/mdui@0.4.3/dist/js/mdui.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+ 
+    <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+
+
+ 
+    <script src="https://cdn.jsdelivr.net/npm/smoothscroll-for-websites@1.4.9/SmoothScroll.min.js"></script>
+
+
+<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.15.8/build/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+<script src="../../../../js/app.js?v=1571303568386"></script>
+<script src="https://cdn.jsdelivr.net/npm/lazysizes@5.1.0/lazysizes.min.js"></script>
+
+  
+
+
+
+
+
+</body>
+
+</html>
