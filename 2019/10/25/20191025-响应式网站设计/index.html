@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html>
+
+<head><meta name="generator" content="Hexo 3.9.0">
+  
+  <title>响应式网站设计 - 日行千里</title>
+  <meta charset="UTF-8">
+  <meta name="description" content="程序猿日常">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  
+
+  <link rel="shortcut icon" href="/favicon.ico" type="image/png">
+  <meta name="description" content="响应式网站设计">
+<meta property="og:type" content="article">
+<meta property="og:title" content="响应式网站设计">
+<meta property="og:url" content="http://yoursite.com/2019/10/25/20191025-响应式网站设计/index.html">
+<meta property="og:site_name" content="日行千里">
+<meta property="og:description" content="响应式网站设计">
+<meta property="og:locale" content="zh-tw">
+<meta property="og:updated_time" content="2019-10-25T09:10:45.280Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="响应式网站设计">
+<meta name="twitter:description" content="响应式网站设计">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdui@0.4.3/dist/css/mdui.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.15.8/styles/atom-one-dark.css">
+   
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
+  
+  <link rel="stylesheet" href="//at.alicdn.com/t/font_1038733_0xvrvpg9c0r.css">
+  <link rel="stylesheet" href="../../../../css/style.css?v=1571994655065">
+</head>
+
+<body class="mdui-drawer-body-left">
+  
+  <div id="nexmoe-background">
+    <div class="nexmoe-bg" style="background-image: url(http://b-ssl.duitang.com/uploads/item/201708/24/20170824232705_Y2x58.jpeg)"></div>
+    <div class="mdui-appbar mdui-shadow-0">
+      <div class="mdui-toolbar">
+        <a mdui-drawer="{target: '#drawer', swipe: true}" title="menu" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">menu</i></a>
+        <div class="mdui-toolbar-spacer"></div>
+        <!--<a href="javascript:;" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">search</i></a>-->
+        <a href="../../../../index.html" title="shuo" class="mdui-btn mdui-btn-icon"><img src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=2003571102,4002116936&amp;fm=26&amp;gp=0.jpg"></a>
+       </div>
+    </div>
+  </div>
+  <div id="nexmoe-header">
+      <div class="nexmoe-drawer mdui-drawer" id="drawer">
+    <div class="nexmoe-avatar mdui-ripple">
+        <a href="../../../../index.html" title="shuo">
+            <img src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=2003571102,4002116936&amp;fm=26&amp;gp=0.jpg" alt="shuo">
+        </a>
+    </div>
+    <div class="nexmoe-count">
+        <div><span>Articles</span>18</div>
+        <div><span>Tags</span>0</div>
+        <div><span>Categories</span>0</div>
+    </div>
+    <ul class="nexmoe-list mdui-list" mdui-collapse="{accordion: true}">
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple" href="../../../../index.html" title="回到首页">
+            <i class="mdui-list-item-icon nexmoefont icon-home"></i>
+            <div class="mdui-list-item-content">
+                回到首页
+            </div>
+        </a>
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple" href="../../../../about.html" title="关于博客">
+            <i class="mdui-list-item-icon nexmoefont icon-info-circle"></i>
+            <div class="mdui-list-item-content">
+                关于博客
+            </div>
+        </a>
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple" href="../../../../PY.html" title="我的朋友">
+            <i class="mdui-list-item-icon nexmoefont icon-unorderedlist"></i>
+            <div class="mdui-list-item-content">
+                我的朋友
+            </div>
+        </a>
+        
+    </ul>
+    <aside id="nexmoe-sidebar">
+  
+  <div class="nexmoe-widget-wrap">
+    <h3 class="nexmoe-widget-title">Social</h3>
+    <div class="nexmoe-widget nexmoe-social">
+        <a class="mdui-ripple" href="https://space.bilibili.com/20238211" target="_blank" mdui-tooltip="{content: '哔哩哔哩'}" style="color: rgb(231, 106, 141);background-color: rgba(231, 106, 141, .15);">
+            <i class="nexmoefont icon-bilibili"></i>
+        </a><a class="mdui-ripple" href="https://github.com/zzj0401/zzj0401.github.io" target="_blank" mdui-tooltip="{content: 'GitHub'}" style="color: rgb(25, 23, 23);background-color: rgba(25, 23, 23, .15);">
+            <i class="nexmoefont icon-github"></i>
+        </a>
+    </div>
+</div>
+  
+  
+
+  
+  
+  
+  
+  <div class="nexmoe-widget-wrap">
+    <h3 class="nexmoe-widget-title">Archive</h3>
+    <div class="nexmoe-widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../../../../archives/2019/10/">十月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../../../archives/2019/08/">八月 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+</aside>
+    <div class="nexmoe-copyright">
+        &copy; 2019 shuo
+        Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+        & <a href="https://nexmoe.com/hexo-theme-nexmoe.html" target="_blank">Nexmoe</a>
+    </div>
+</div><!-- .nexmoe-drawer -->
+  </div>
+  <div id="nexmoe-content">
+    <div class="nexmoe-primary">
+        <div class="nexmoe-post">
+    <div class="nexmoe-post-cover"> 
+        
+        <img src="http://img5.imgtn.bdimg.com/it/u=1736205640,2788754345&fm=26&gp=0.jpg">
+        
+        <h1>响应式网站设计</h1>
+    </div>
+  <div class="nexmoe-post-meta">
+    <a><i class="nexmoefont icon-calendar-fill"></i>2019年10月25日</a>
+    <a><i class="nexmoefont icon-areachart"></i>4.5k 字</a>
+    <a><i class="nexmoefont icon-time-circle-fill"></i>大概 22 分钟</a>
+    
+    
+  </div>
+  <article>
+    <h1 id="响应式网站设计"><a href="#响应式网站设计" class="headerlink" title="响应式网站设计"></a>响应式网站设计</h1><a id="more"></a>
+
+<h2 id="一-实践原则"><a href="#一-实践原则" class="headerlink" title="一.实践原则"></a>一.实践原则</h2><h3 id="1-响应式网站概念"><a href="#1-响应式网站概念" class="headerlink" title="1.响应式网站概念"></a>1.响应式网站概念</h3><p>1）.flexible gird layout 弹性网站布局</p>
+<p>2）.flexible image 弹性图片</p>
+<p>3）.media queries 媒体查询</p>
+<p>响应式网站是一个设计理念，它是多项技术的综合体。多出来的工作量是JS脚本，css样式做一些改动，每个设备都能得到正确的设计</p>
+<h3 id="2-progressive-enhancement"><a href="#2-progressive-enhancement" class="headerlink" title="2.progressive enhancement"></a>2.progressive enhancement</h3><p>渐进增强，指从最基本的可用性出发，在保证站点页面在低级浏览器中 的可用性和可访问性的基础上，逐步增加功能及提高用户体验。</p>
+<h3 id="3-graceful-degradation"><a href="#3-graceful-degradation" class="headerlink" title="3.graceful degradation"></a>3.graceful degradation</h3><p>优雅降级，指首先使用最新的技术面向高级浏览器构建最强的功能及用户体验，然后针对低级浏览器的限制，逐步衰减那些无法被支持的功能及体验</p>
+<h3 id="4-选择断点（媒体查询）"><a href="#4-选择断点（媒体查询）" class="headerlink" title="4.选择断点（媒体查询）"></a>4.选择断点（媒体查询）</h3><p>参考分成几种类型：0-480（小屏幕）481-800（中）801-1400（大）1400+（巨）</p>
+<h2 id="二-媒体查询"><a href="#二-媒体查询" class="headerlink" title="二.媒体查询"></a>二.媒体查询</h2><p>1.</p>
+<pre><code>&lt;link rel=&quot;stylesheet&quot;type=&quot;text/css&quot;href=&quot;site.css&quot;media=&quot;screen&quot;/&gt; //屏幕
+&lt;link rel=&quot;stylesheet&quot;type=&quot;text/css&quot;href=&quot;print.css&quot;media=&quot;print&quot;/&gt;  //打印
+@media all and (min-width:800px)and(orientatiopon:landscape){
+...
+}</code></pre><p>all:用来指媒体类型,all是所有媒体类型都实用，类型有 screen或print</p>
+<p>and:连接，其他连接词：not 、only、or</p>
+<pre><code>@media not screen and (color),print and (color){
+...
+}
+等价与
+@media not screen and (color) or print and (color){
+...
+}
+逗号的作用等同与or</code></pre><p>only:防止老旧的浏览器，不支持带媒体属性的查询而应用到给定的样式</p>
+<p>2.css3媒体属性：</p>
+<p>1)width,height(视口)</p>
+<p>2)device-width device-height(设备，表面)</p>
+<p>3)orientation(设备处于横向还是纵向)</p>
+<p>4)aspect-ratio(基于视口宽高比)</p>
+<p>5)device-aspect-ratio(渲染表面（设备屏幕）的宽度)</p>
+<p>6)color(每种颜色的位数)</p>
+<p>7) resolution(分辨率)</p>
+<p>3.一些概念</p>
+<p>视口(viewport):桌面电脑端的视口是浏览器窗口的可视区域，移动设备端的视口比桌面电脑端的概念稍微复杂些，分为可视视口、理想视口、布局视口</p>
+<p>1）布局视口（layout viewport）：在默认情况下给了viewport一个比较宽的值，目的就是为了那些为桌面电脑端设计的网站也能在移动设备上正常显示。这个viewport视口就叫做布局视口</p>
+<p>2）可视视口：手机端显示的大小</p>
+<p>在调试的时候：缩放改变可视视口大小不改变布局视口大小</p>
+<p>3）理想视口：为构建手机浏览器优化的页面而添加的，是布局视口在一个设备上的最佳尺寸</p>
+<p>开发时需要指定一下属性，使布局视口变为理想视口</p>
+<pre><code>&lt;meta name=&#39;viewport&#39;content=&quot;width=device-width&quot;/&gt;</code></pre><p>参考百度的头：</p>
+<pre><code>&lt;meta name=&quot;viewport&quot;content=&quot;width=device-width&quot;
+minimum-scale=1.0, //最小的缩放比例
+maximum-scale=1.0,//最大的缩放比例
+user-scalable=no&#39;/&gt;//禁用了用户缩放</code></pre><h2 id="三-一些有用的文件"><a href="#三-一些有用的文件" class="headerlink" title="三.一些有用的文件"></a>三.一些有用的文件</h2><p>1.robots.txt：用于搜索引擎来访问网站时第一个查看的文件（什么可以看什么不可以看，爬虫程序）</p>
+<pre><code>User0agent:*
+Disallow:/admin/
+//除了admin文件夹下的其他都可以访问</code></pre><p>2.favicon.ico：图标文件，用于地址栏的图标</p>
+<p>3.humans.txt：保存网站建设者信息</p>
+<p>4..editorconfig：统一代码工具（插件）</p>
+<pre><code>#editorconfig.org 注释
+root=true #最顶层
+[*]#应用所有文件
+charset=utf-8 #编码格式
+indent_size=4 #缩进尺寸
+indext_style=space#使用空格缩进
+insert_final_newline=true #每个文件以空白行结尾
+trim_trailing_whitespace=true#清除没必要的空格
+[*.md]
+rim_trailing_whitespace=false</code></pre><p>5）LICNESN.txt：协议，版权说明</p>
+<p>6）CHANGELOG.md：项目每个版本的更新，说明版本号，更新内容，修复了哪些问题等</p>
+<h2 id="四-建立html文件"><a href="#四-建立html文件" class="headerlink" title="四.建立html文件"></a>四.建立html文件</h2><p>1.IE浏览器的兼容</p>
+<pre><code>&lt;!--[if lte IE8]&gt;
+&lt;p&gt;如果时低于IE8的浏览器就显示这段话&lt;/p&gt;
+ &lt;![endif]--&gt;
+//gt:大于
+//lt:小于
+//gte:大于等于
+//lte:小于等于</code></pre><pre><code>&lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;ie=edge&quot;&gt;</code></pre><p>2.关于统一浏览器css文件规则的两种文件，以消除不同浏览器加载css时显示差异</p>
+<p>css resets：会清除所有原来的样式，如h1、h5都是同样大小的文字</p>
+<p>normalize.css：会有一个基本默认的样式</p>
+<p>3.关于页面布局：利用html5的标签</p>
+<pre><code> &lt;header&gt;网页头部&lt;/header&gt;
+ &lt;div&gt;
+   &lt;section&gt;区块：广告等&lt;/section&gt;
+ &lt;/div&gt;
+ &lt;footer&gt;网页尾部&lt;/footer&gt;
+ &lt;nav&gt;导航链接&lt;/nav&gt;
+ &lt;article&gt;可以完整被外面引用的元素，特殊的section&lt;/article&gt;
+
+ &lt;b&gt;注意&lt;/b&gt;
+ &lt;em&gt;强调&lt;/em&gt;
+ &lt;i&gt;不同的语义&lt;/i&gt;</code></pre><p>快速建立列表：ul&gt;li*5&gt;a</p>
+<h2 id="五-桌面端css文件"><a href="#五-桌面端css文件" class="headerlink" title="五.桌面端css文件"></a>五.桌面端css文件</h2><p>此处先以桌面谷歌浏览器为标准，加入样式文件</p>
+<p>1.采用rem单位：</p>
+<p> em：相对参照物为父元素的font-size,有继承特点若没有设置,浏览器会有一个默认的em设置：1em=16px,容易混乱</p>
+<p> rem ：相对参照物为根元素html</p>
+<p>font-size:62.5% 1rem=10px(10/16*100%)</p>
+<p>font-size:100% 1rem=16px</p>
+<p>2.一些常用的css</p>
+<p>1）页面样式 </p>
+<pre><code>body{
+  font-size:1.2rem;
+  line-height: 1.5;
+  background: #f7f7f7;
+}
+a{
+  color:#666;
+  text-decoration: none;
+}
+a:hover,a.active{
+color:#0ae;
+text-decoration: underline;
+}
+html{
+  font-size:62.5%;
+  color:#222;
+}
+::selection{
+  background-color: #b3b4fc;
+  text-shadow: none;
+}
+ul{
+  margin:0;
+  padding:0
+}
+/* 去掉小圆点 */
+li{
+  list-style:none
+}</code></pre><p>2）工具样式</p>
+<pre><code>/* 在父元素中居中显示 */
+.center-block{
+  display: block;
+  margin-right:auto;
+  margin-left:auto;
+}
+
+.pull-right{
+  float:right !important
+}
+.pull-left{
+  float:left !important
+}
+.text-right{
+  text-align: right !important;
+}
+.text-left{
+  text-align: left !important;
+}
+.text-center{
+  text-align: center !important;
+}
+/*隐藏元素并不占空间*/
+.hide{
+  display: none !important;
+}
+.show{
+  display:block !important;
+}
+/*隐藏元素，但是原本占用的空间还在*/
+.invisible{
+  visibility:hidden
+  /* 不会挤占空间 */
+}
+/* 隐藏文本 */
+.text-hide{
+  font:0/0 a;
+  color: transparent;
+  text-shadow: none;
+  background-color:transparent ;
+  border: 0;
+}
+/* 清除浮动 */
+.clearfix:after{
+  content:&#39;.&#39;;
+  display:block;
+  height:0;
+  clear:both;
+  visibility:hidden;
+  }
+  .clearfix{
+  zoom:1}
+/* 浏览器更新提示 */
+.browserupgrade{
+  margin:0;
+  padding:1rem;
+  background:#ccc
+}</code></pre><p>3.清除浮动的方法：</p>
+<p>1）在浮动的元素最后加上</p>
+<pre><code>&lt;div style=&quot;clean:both&quot;&gt;&lt;/div&gt;</code></pre><p>2） 在包裹的元素的css样式添加：over-flow:auto(hidden)</p>
+<p>3)    让父元素也浮动:影响布局</p>
+<p>4）</p>
+<pre><code>.clearfix:after{
+content:&#39;.&#39;;
+display:block;
+height:0;
+clear:both;
+visibility:hidden;
+}
+.clearfix{
+zoom:1
+}</code></pre><p>5）触发bfc，就可以消除浮动</p>
+<p>会触发bfc的元素：</p>
+<p>float</p>
+<p>over-flow</p>
+<p>display:table-cell/table-caption/inline-block</p>
+<p>position:fixed/absolute</p>
+<p>如，利用display：table消除浮动</p>
+<pre><code>.clearfix:after{
+content:&#39;.&#39;;
+display:table;
+clear:both;
+}
+/*或者*/
+.clearfix:before{
+content:&#39;&#39;;
+display:table;
+}
+.clearfix:after{
+clear:both;
+}</code></pre><p>4.html空白符问题：在如li或div元素换行的时候，html会加上一些空格</p>
+<p>解决方式：</p>
+<p>1）.在父节点样式添加font-size:0 </p>
+<p>2）.闭合标签写在下面 </p>
+<p>3）.li不闭合</p>
+<p>4）.设置父的边距</p>
+<p>5）white-space-collapsing（有可能不支持）</p>
+<p>5.图片精灵：减少服务器压力，加快加载，父元素加载一张大图片，子元素采用定位拿取图片一部分</p>
+<pre><code>footer ul li .icon{
+  display: inline-block;
+  /* 文字的缩进 来隐藏掉这些文字*/
+  text-indent: -999rem;
+  margin-right:1.5rem;
+  background: url(https://i.alipayobjects.com/e/201307/jebmKcbrh.png) no-repeat;
+  background-size:466px 477px;
+  overflow:hidden;
+}
+footer ul li .icon-zfywxk{
+  width: 38px;
+  height:27px;
+  /* 定位 */
+  background-position:-369px -45px;
+}
+footer ul li .icon-pcirk{
+  width:78px;
+  height: 27px;
+  background-position: -110px -96px;
+}</code></pre><p>6.其他样式设置：</p>
+<p>1).让所有li元素在一行显示：</p>
+<pre><code>header .top  ul li{
+</code></pre><p>2).设置不包括第一个列表元素的样式</p>
+<pre><code>header .top ul li + li{
+  /* 不包括第一个元素 */
+  border-left: 1px solid #999;
+  margin-left: -3px;
+}</code></pre><p>3).使得a元素可以设置高度：</p>
+<pre><code>header .top  ul li a{
+  /* 因为a是line元素，不设置inline-block高度不会起作用 */
+  display:inline-block;
+  padding: 0 1.5rem;
+  color:#fff
+}</code></pre><p>4).不影响元素里面的元素的透明度设置：</p>
+<pre><code>background:rgba(255, 255, 255, 0.9);</code></pre><p>5).动态计算</p>
+<pre><code>.feature .item{
+  display: inline-block;
+  /* 动态计算 ，3等分，减去padding 2rem margin 1.5*2rem/3,所以总共减去3rem*/
+  width:calc(33.33333333333% - 3rem);
+  padding: 1rem;
+  font-size: 1.4rem;
+  background-color: #fff;
+  box-shadow: 0 0 4px #ccc;
+}</code></pre><p>6).不换行，以省略号代替超过的文本</p>
+<pre><code>.notice a:first-child{
+  /* 不换行 过长有省略号*/
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+/*在元素前面添加内容*/
+.notice a:first-child:before{
+  /* 00a0：不换行的空格 */
+content:&#39;最新公告： \00a0\00a0&#39;;
+color: #aaa;
+}</code></pre><p>7).给图片加滤镜，变成别的颜色</p>
+<pre><code>.footer-content .brand{
+  float: left;
+  display: block;
+  /* 灰色滤镜 */
+  filter:grayscale(100%);
+  -webkit-filter:grayscale(100%) ;
+  width: 20%;
+  height:35px;
+  background:url(&#39;../img/logo@1x.png&#39;) no-repeat left;
+  background-size: 150px 35px; 
+}</code></pre><h2 id="六-安卓端css"><a href="#六-安卓端css" class="headerlink" title="六.安卓端css"></a>六.安卓端css</h2><p>此处安卓端有中，小两个不同的设计，利用媒体查询针对不同的地方重写部分样式，相同的样式不需要重写</p>
+<p>此处断点为小屏幕：小于480，480-800之间，大于800（浏览器）</p>
+<p>媒体查询的写法有两种，一是写在css文件最尾部，二是每个块下面写每个块的媒体查询</p>
+<p>第二种方式比较好维护</p>
+<pre><code>/*以网页顶部为例*/
+/* 网络头部 */
+header{
+  width:100%
+}
+header .top {
+ line-height: 3rem;
+ padding: 0 1.5rem;
+ color:#fff;
+ background: #555;
+ border-bottom: 1px #ecc000 solid;
+}
+header .top .tel{
+  float:left
+}
+header .top ul{
+  text-align: right;
+}
+header .top  ul li{
+  /* 让所有li元素在一行显示 */
+  display:inline-block
+}
+header .top ul li + li{
+  /* 不包括第一个元素 */
+  border-left: 1px solid #999;
+  margin-left: -3px;
+}
+header .top  ul li a{
+  /* 因为a是line元素，不设置inline-block高度不会起作用 */
+  display:inline-block;
+  padding: 0 1.5rem;
+  color:#fff
+}
+@media only screen and (max-width:800px){
+  header .top  ul li a{
+    padding: 0 1rem;
+  }
+}
+@media only screen and (min-width:481px) and (max-width:800px){
+}
+@media only screen and (max-width:480px){
+  header .top .tel,
+  /* css3选择器 */
+  header .top  ul li:nth-child(3),
+  header .top  ul li:nth-child(4){
+    display: none;
+  }
+}</code></pre><p>此处的媒体查询：</p>
+<pre><code>@media only screen and (max-width:800px){
+}
+@media only screen and (min-width:481px) and (max-width:800px){
+}
+@media only screen and (max-width:480px){}</code></pre><p>当屏幕宽度小于480px时在执行第三个媒体查询时会继承第一个媒体查询，可以在第一个媒体查询写下面两种情况的共同处，减少冗余。</p>
+<p>若媒体查询要针对浏览器而言，就应该使用1em=16px的换算来使用em</p>
+<p>浏览器的调试：使用responsive,可以拖动控制宽度，谷歌的开发者工具中右边的3个小点有许多方便的工具如标尺showrules</p>
+<p>一些页面在小屏幕的错位可能是浮动的原因，可以试着清除浮动解决</p>
+<h2 id="七-轮播图组件"><a href="#七-轮播图组件" class="headerlink" title="七.轮播图组件"></a>七.轮播图组件</h2><p>1.OwlCarousel2</p>
+<p>在main.js添加配置项：</p>
+<pre><code>$(document).ready(function(){
+  $(&quot;.owl-carousel&quot;).owlCarousel({
+    items:1,
+    loop:true,
+    autoplay:true,
+    autoplayTimeout:3000,
+    autoplayHoverPause:true
+  });
+})</code></pre><p>使用：</p>
+<pre><code>&lt;section class=&quot;ad&quot;&gt;
+      &lt;div class=&quot;owl-carousel owl-theme&quot;&gt;
+      &lt;div class=&quot;item&quot;&gt;
+        &lt;picture&gt;
+          &lt;source src-set=&quot;img/ad001-l.png&quot;media=&quot;(min-width:50em)&quot;&gt;
+            &lt;source src-set=&quot;img/ad001-m.png&quot;media=&quot;(min-width:30em)&quot;&gt;
+              &lt;img src=&quot;img/ad001.png&quot; alt=&quot;年度报告&quot;/&gt;
+        &lt;/picture&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;item&quot;&gt;
+          &lt;picture&gt;
+              &lt;source src-set=&quot;img/ad002-l.png&quot;media=&quot;(min-width:50em)&quot;&gt;
+                &lt;source src-set=&quot;img/ad002-m.png&quot;media=&quot;(min-width:30em)&quot;&gt;
+                  &lt;img src=&quot;img/ad002.png&quot; alt=&quot;红包&quot;/&gt;
+            &lt;/picture&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;item&quot;&gt;
+          &lt;picture&gt;
+              &lt;source src-set=&quot;img/ad003-l.png&quot;media=&quot;(min-width:50em)&quot;&gt;
+                &lt;source src-set=&quot;img/ad003-m.png&quot;media=&quot;(min-width:30em)&quot;&gt;
+                  &lt;img src=&quot;img/ad003.png&quot; alt=&quot;新手秘籍&quot;/&gt;
+            &lt;/picture&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;/section&gt;</code></pre><p>2.如何挑选第三方组件：</p>
+<p>1）.使用人数</p>
+<p>2）.是否开源</p>
+<p>3）.文档是否齐全</p>
+<p>4）.活跃性</p>
+<p>5）.小巧够用即可</p>
+<h2 id="八-响应式图片"><a href="#八-响应式图片" class="headerlink" title="八.响应式图片"></a>八.响应式图片</h2><p>若在移动端加载桌面端的图片（像素比较大），虽然会非常清晰，但是耗费过多的流量，加载慢，用户体验不好，需要在不同大小的设备加载不同大小的图片</p>
+<p>方法如下：</p>
+<p>1.原生：根据窗口大小选不同的图片</p>
+<pre><code>$(document).ready(function(){
+
+function makeImageResponsive(){
+
+var width=$(window).width();
+
+var img=$(&#39;.content img&#39;);
+
+if(width&lt;=480){
+
+img.attr(&#39;src&#39;,&#39;img/480.png&#39;);
+
+}else if(width&lt;=800){
+
+img.attr(&#39;src&#39;,&#39;img/800.png&#39;);
+
+}else{
+
+img.attr(&#39;src&#39;,&#39;img/1600.png&#39;);
+
+}
+
+}})</code></pre><p>2.srcset:提供多个图片,超过大小时候更换</p>
+<pre><code>&lt;img class=&quot;image&quot;scr=&quot;img/480.png&quot; srcset=&quot;img/480.png 480w,img/800.png 800w,img/1600.png 1600w&quot;sizes=&quot;100vw&quot;/&gt;
+&lt;img class=&quot;image&quot;scr=&quot;img/480.png&quot; srcset=&quot;img/480.png 480w,img/800.png 800w,img/1600.png 1600w&quot;sizes=&quot;50vw&quot;/&gt;
+&lt;img class=&quot;image&quot;scr=&quot;img/480.png&quot; srcset=&quot;img/480.png 480w,img/800.png 800w,img/1600.png 1600w&quot;sizes=&quot;(min-width:800px) 800px,100vw&quot;/&gt;
+&lt;img class=&quot;image&quot;scr=&quot;img/480.png&quot; srcset=&quot;img/480.png 480w,img/800.png 800w,img/1600.png 1600w&quot;sizes=&quot;(min-width:800px) calc(100vw - 30em),100vw&quot;/&gt;</code></pre><p>vw：视口单位 </p>
+<p>100：是100% ，100vw是100%的视口宽度，计算以sizes来决定</p>
+<p>sizes的两个参数：媒体查询（可省略） 预估的尺寸</p>
+<p>3.picture：可以结合媒体查询来选用</p>
+<pre><code>&lt;picture&gt;
+&lt;source media=&quot;(max-width:36em)&quot;
+srcset=&quot;img/ps.jpg 768w&quot;/&gt;
+&lt;source 
+srcset=&quot;img/p1.jpg 1800w&quot;/&gt;
+&lt;source type=&quot;image/svg+xml&quot;
+srcset=&quot;logo.svg 480w,logo.svg 880w&quot;/&gt;
+&lt;source type=&quot;image/webp&quot;
+srcset=&quot;logo1.webp 480w,logo2.webp 880w&quot;/&gt;
+&lt;img src=&#39;img/p1.jpg&#39;/&gt;
+&lt;/picture&gt;</code></pre><p>4.svg:可缩放的矢量图形，很难色彩丰富，图像逼真，兼容性强</p>
+<h2 id="九-兼容性与优化"><a href="#九-兼容性与优化" class="headerlink" title="九.兼容性与优化"></a>九.兼容性与优化</h2><p>1.polyfill:填平兼容性问题，防止浏览器不支持 </p>
+<pre><code> &lt;script src=&quot;js/vendor//picturefill.min.js&quot;&gt;&lt;/script&gt;</code></pre><p>2.优化</p>
+<p>1)图片压缩:<a href="https://tinypng.com" target="_blank" rel="noopener">https://tinypng.com</a> </p>
+<p>2)浏览器同步测试工具：<a href="http://www.browsersync.cn" target="_blank" rel="noopener">www.browsersync.cn</a></p>
+<p>安装：</p>
+<p>npm i -g browser-sync</p>
+<p>启动：browser-sync start –server ‘src’ –files ‘src’(*.js)</p>
+<p>3)在线压缩代码：<a href="https://javascript-minifier.com" target="_blank" rel="noopener">https://javascript-minifier.com</a></p>
+<p>4)打包代码的工具：</p>
+<p>Grunt（<a href="http://www.gulpjs.com.cn）：自动化构建工具" target="_blank" rel="noopener">www.gulpjs.com.cn）：自动化构建工具</a></p>
+<p>安装：npm i gulp –save-dev</p>
+<p>在根目录下新建gulpfile.js</p>
+<pre><code>var gulp=require(&#39;gulp&#39;)
+
+//任务定义
+
+gulp.task(&#39;hello&#39;,fuction(){
+
+console.log(&#39;Hello Gulp&#39;)
+
+})</code></pre><p>使用：gulp hello</p>
+<p>安装插件：</p>
+<p>npm i gulp-rev gulp-rev-replace gulp-useref gulp-filter gulp-uglify gulp-csso –save-dev</p>
+<p>gulp-rev:添加版本号</p>
+<p>gulp-rev-replace：更新index的引用</p>
+<p>gulp-useref:html 注释的方法写一些注释</p>
+<p>gulp-filter：过滤器</p>
+<p>gulp-watch:监听改变，自动执行任务</p>
+<p>gulp-postcss:自动添加css文件中浏览器前缀</p>
+<p>gulp-concat:多个文件合并成一个文件</p>
+<p>gulp-responsive:响应式图片</p>
+<pre><code>var app = {  // 定义目录
+    srcPath:&#39;src/&#39;,
+    buildPath:&#39;build/&#39;,
+    distPath:&#39;dist/&#39;
+}
+
+/*1.引入gulp与gulp插件   使用时，要去下载这些插件*/
+var gulp = require(&#39;gulp&#39;);
+var less = require(&#39;gulp-less&#39;);
+var cssmin = require(&#39;gulp-cssmin&#39;);
+var uglify = require(&#39;gulp-uglify&#39;);
+var concat = require(&#39;gulp-concat&#39;);
+var connect = require(&#39;gulp-connect&#39;);
+var imagemin = require(&#39;gulp-imagemin&#39;);
+var open = require(&#39;open&#39;);
+
+/*把bower下载的前端框架放到我们项目当中*/
+gulp.task(&#39;lib&#39;,function () {
+    gulp.src(&#39;bower_components/**/*.js&#39;)
+        .pipe(gulp.dest(app.buildPath+&#39;lib&#39;))
+        .pipe(gulp.dest(app.distPath+&#39;lib&#39;))
+        .pipe(connect.reload()) //当内容发生改变时， 重新加载。
+});
+
+
+
+/*2.定义任务 把所有html文件移动另一个位置*/
+gulp.task(&#39;html&#39;,function () {
+    /*要操作哪些文件 确定源文件地址*/
+    gulp.src(app.srcPath+&#39;**/*.html&#39;)  /*src下所有目录下的所有.html文件*/
+        .pipe(gulp.dest(app.buildPath)) //gulp.dest 要把文件放到指定的目标位置
+        .pipe(gulp.dest(app.distPath))
+        .pipe(connect.reload()) //当内容发生改变时， 重新加载。
+});
+/*3.执行任务 通过命令行。gulp 任务名称*/
+/*定义编译less任务  下载对应的插件 gulp-less
+ * 把less文件转成css放到build
+ * */
+gulp.task(&#39;less&#39;,function () {
+    gulp.src(app.srcPath+&#39;style/index.less&#39;)
+        .pipe(less())
+        .pipe(gulp.dest(app.buildPath+&#39;css/&#39;))
+        /*经过压缩，放到dist目录当中*/
+        .pipe(cssmin())
+        .pipe(gulp.dest(app.distPath+&#39;css/&#39;))
+        .pipe(connect.reload())
+});
+
+/*合并js*/
+gulp.task(&#39;js&#39;,function () {
+    gulp.src(app.srcPath+&#39;js/**/*.js&#39;)
+        .pipe(concat(&#39;index.js&#39;))
+        .pipe(gulp.dest(app.buildPath+&#39;js/&#39;))
+        .pipe(uglify())
+        .pipe(gulp.dest(app.distPath+&#39;js&#39;))
+        .pipe(connect.reload())
+});
+
+/*压缩图片*/
+gulp.task(&#39;image&#39;,function () {
+    gulp.src(app.srcPath+&#39;images/**/*&#39;)
+        .pipe(gulp.dest(app.buildPath+&#39;images&#39;))
+        .pipe(imagemin())
+        .pipe(gulp.dest(app.distPath+&#39;images&#39;))
+        .pipe(connect.reload())
+});
+
+/*同时执行多个任务 [其它任务的名称]
+ * 当前bulid时，会自动把数组当中的所有任务给执行了。
+ * */
+gulp.task(&#39;build&#39;,[&#39;less&#39;,&#39;html&#39;,&#39;js&#39;,&#39;image&#39;,&#39;lib&#39;]);
+
+
+/*定义server任务
+ * 搭建一个服务器。设置运行的构建目录
+ * */
+gulp.task(&#39;server&#39;,[&#39;build&#39;],function () {
+    /*设置服务器*/
+    connect.server({
+        root:[app.buildPath],//要运行哪个目录
+        livereload:true,  //是否热更新。
+        port:9999  //端口号
+    })
+    /*监听哪些任务*/
+    gulp.watch(&#39;bower_components/**/*&#39;,[&#39;lib&#39;]);
+    gulp.watch(app.srcPath+&#39;**/*.html&#39;,[&#39;html&#39;]);
+    gulp.watch(app.srcPath+&#39;js/**/*.js&#39;,[&#39;js&#39;]);
+    gulp.watch(app.srcPath+&#39;images/**/*&#39;,[&#39;image&#39;]);
+    gulp.watch(app.srcPath+&#39;style/**/*.less&#39;,[&#39;less&#39;]);
+
+    //通过浏览器把指定的地址 （http://localhost:9999）打开。
+    open(&#39;http://localhost:9999&#39;);
+});
+
+/*定义默认任务
+ * 直接执行gulp 会调用的任务
+ * */
+gulp.task(&#39;default&#39;,[&#39;server&#39;]);</code></pre><p>其他打包工具：Gulp，Webpack(静态资源打包工具，全面，新)</p>
+<p>其他工具：modernizr</p>
+<p><a href="https://www.npmjs.com/package/modernizr" target="_blank" rel="noopener">https://www.npmjs.com/package/modernizr</a></p>
+<p>介绍：Modernizr是一个开源的JS库，当你在网页中嵌入Modernizr的脚本时，它会检测当前浏览器是否支持CSS3的特性，比如 @font-face、border-radius、 border-image、box-shadow、rgba() 等，同时也会检测是否支持<a href="http://www.mhtml5.com/" target="_blank" rel="noopener">HTML5</a>的 特性——比如audio、video、本地储存、和新的 <input>标签的类型和属性等。在获取到这些信息的基础上，你可以在那些支持这些功能的浏览器上使用它们，来决定是否创建一个基于JS的 fallback，或者对那些不支持的浏览器进行简单的优雅降级。另外，Modernizr还可以令IE支持对<a href="http://www.mhtml5.com/" target="_blank" rel="noopener">HTML5</a>的元素应用CSS样式，这样开发者就可以立即使用这些更富有语义化的标签了。</p>
+<p><a href="https://www.jb51.net/article/65650.htm" target="_blank" rel="noopener">https://www.jb51.net/article/65650.htm</a></p>
+
+  </article>
+  
+    
+<div class="nexmoe-post-copyright">
+<i class="mdui-list-item-icon nexmoefont icon-info-circle"></i>
+<strong>Author：</strong>shuo<br>
+<strong>Link：</strong><a href="http://yoursite.com/2019/10/25/20191025-响应式网站设计/" title="http://yoursite.com/2019/10/25/20191025-响应式网站设计/" target="_blank" rel="noopener">http://yoursite.com/2019/10/25/20191025-响应式网站设计/</a><br>
+
+  <strong>版权声明：</strong>本文采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/deed.zh" target="_blank">CC BY-NC-SA 3.0 CN</a> 协议进行许可
+
+</div>
+
+
+  
+  <section class="nexmoe-comment">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1.5.0/dist/gitalk.min.css">
+<div id="gitalk"></div>
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1.5.0/dist/gitalk.min.js"></script>
+<script type="text/javascript">
+    var gitalk = new Gitalk({
+        clientID: '80b2453b6d5f37ad6225',
+        clientSecret: '43e99fa852795c9a7b3eb924b2558c64b84bbdeb',
+        id: window.location.pathname,
+        repo: 'nexmoe.github.io',
+        owner: 'nexmoe',
+        admin: 'nexmoe'
+    })
+    gitalk.render('gitalk')
+</script>
+</section>
+</div>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/mdui@0.4.3/dist/js/mdui.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+ 
+    <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+
+
+ 
+    <script src="https://cdn.jsdelivr.net/npm/smoothscroll-for-websites@1.4.9/SmoothScroll.min.js"></script>
+
+
+<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.15.8/build/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+<script src="../../../../js/app.js?v=1571994655075"></script>
+<script src="https://cdn.jsdelivr.net/npm/lazysizes@5.1.0/lazysizes.min.js"></script>
+
+  
+
+
+
+
+
+</body>
+
+</html>

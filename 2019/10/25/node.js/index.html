@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html>
+
+<head><meta name="generator" content="Hexo 3.9.0">
+  
+  <title>node.js - 日行千里</title>
+  <meta charset="UTF-8">
+  <meta name="description" content="程序猿日常">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  
+
+  <link rel="shortcut icon" href="/favicon.ico" type="image/png">
+  <meta name="description" content="node.js">
+<meta property="og:type" content="article">
+<meta property="og:title" content="node.js">
+<meta property="og:url" content="http://yoursite.com/2019/10/25/node.js/index.html">
+<meta property="og:site_name" content="日行千里">
+<meta property="og:description" content="node.js">
+<meta property="og:locale" content="zh-tw">
+<meta property="og:updated_time" content="2019-10-25T09:03:46.396Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="node.js">
+<meta name="twitter:description" content="node.js">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdui@0.4.3/dist/css/mdui.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.15.8/styles/atom-one-dark.css">
+   
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
+  
+  <link rel="stylesheet" href="//at.alicdn.com/t/font_1038733_0xvrvpg9c0r.css">
+  <link rel="stylesheet" href="../../../../css/style.css?v=1571994655033">
+</head>
+
+<body class="mdui-drawer-body-left">
+  
+  <div id="nexmoe-background">
+    <div class="nexmoe-bg" style="background-image: url(http://b-ssl.duitang.com/uploads/item/201708/24/20170824232705_Y2x58.jpeg)"></div>
+    <div class="mdui-appbar mdui-shadow-0">
+      <div class="mdui-toolbar">
+        <a mdui-drawer="{target: '#drawer', swipe: true}" title="menu" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">menu</i></a>
+        <div class="mdui-toolbar-spacer"></div>
+        <!--<a href="javascript:;" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">search</i></a>-->
+        <a href="../../../../index.html" title="shuo" class="mdui-btn mdui-btn-icon"><img src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=2003571102,4002116936&amp;fm=26&amp;gp=0.jpg"></a>
+       </div>
+    </div>
+  </div>
+  <div id="nexmoe-header">
+      <div class="nexmoe-drawer mdui-drawer" id="drawer">
+    <div class="nexmoe-avatar mdui-ripple">
+        <a href="../../../../index.html" title="shuo">
+            <img src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=2003571102,4002116936&amp;fm=26&amp;gp=0.jpg" alt="shuo">
+        </a>
+    </div>
+    <div class="nexmoe-count">
+        <div><span>Articles</span>18</div>
+        <div><span>Tags</span>0</div>
+        <div><span>Categories</span>0</div>
+    </div>
+    <ul class="nexmoe-list mdui-list" mdui-collapse="{accordion: true}">
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple" href="../../../../index.html" title="回到首页">
+            <i class="mdui-list-item-icon nexmoefont icon-home"></i>
+            <div class="mdui-list-item-content">
+                回到首页
+            </div>
+        </a>
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple" href="../../../../about.html" title="关于博客">
+            <i class="mdui-list-item-icon nexmoefont icon-info-circle"></i>
+            <div class="mdui-list-item-content">
+                关于博客
+            </div>
+        </a>
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple" href="../../../../PY.html" title="我的朋友">
+            <i class="mdui-list-item-icon nexmoefont icon-unorderedlist"></i>
+            <div class="mdui-list-item-content">
+                我的朋友
+            </div>
+        </a>
+        
+    </ul>
+    <aside id="nexmoe-sidebar">
+  
+  <div class="nexmoe-widget-wrap">
+    <h3 class="nexmoe-widget-title">Social</h3>
+    <div class="nexmoe-widget nexmoe-social">
+        <a class="mdui-ripple" href="https://space.bilibili.com/20238211" target="_blank" mdui-tooltip="{content: '哔哩哔哩'}" style="color: rgb(231, 106, 141);background-color: rgba(231, 106, 141, .15);">
+            <i class="nexmoefont icon-bilibili"></i>
+        </a><a class="mdui-ripple" href="https://github.com/zzj0401/zzj0401.github.io" target="_blank" mdui-tooltip="{content: 'GitHub'}" style="color: rgb(25, 23, 23);background-color: rgba(25, 23, 23, .15);">
+            <i class="nexmoefont icon-github"></i>
+        </a>
+    </div>
+</div>
+  
+  
+
+  
+  
+  
+  
+  <div class="nexmoe-widget-wrap">
+    <h3 class="nexmoe-widget-title">Archive</h3>
+    <div class="nexmoe-widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../../../../archives/2019/10/">十月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../../../archives/2019/08/">八月 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+</aside>
+    <div class="nexmoe-copyright">
+        &copy; 2019 shuo
+        Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+        & <a href="https://nexmoe.com/hexo-theme-nexmoe.html" target="_blank">Nexmoe</a>
+    </div>
+</div><!-- .nexmoe-drawer -->
+  </div>
+  <div id="nexmoe-content">
+    <div class="nexmoe-primary">
+        <div class="nexmoe-post">
+    <div class="nexmoe-post-cover"> 
+        
+        <img src="http://img0.imgtn.bdimg.com/it/u=2164372376,2467635938&fm=26&gp=0.jpg">
+        
+        <h1>node.js</h1>
+    </div>
+  <div class="nexmoe-post-meta">
+    <a><i class="nexmoefont icon-calendar-fill"></i>2019年10月25日</a>
+    <a><i class="nexmoefont icon-areachart"></i>1.7k 字</a>
+    <a><i class="nexmoefont icon-time-circle-fill"></i>大概 8 分钟</a>
+    
+    
+  </div>
+  <article>
+    <h1 id="node-js"><a href="#node-js" class="headerlink" title="node.js"></a>node.js</h1><a id="more"></a>
+
+<h2 id="一-应用场景"><a href="#一-应用场景" class="headerlink" title="一.应用场景"></a>一.应用场景</h2><p>web应用、api编写、中间层、微服务</p>
+<h2 id="二-工具"><a href="#二-工具" class="headerlink" title="二.工具"></a>二.工具</h2><p>自动重启工具nodemon</p>
+<p>安装：cnpm i nodemon –save</p>
+<p>如果出现：</p>
+<p>无法加载文件 C:\Users\Administrator\AppData\Roaming\npm\nodemon.ps1</p>
+<p>则</p>
+<p>1).管理员身份打开powerShell</p>
+<p>2).输入set-ExecutionPolicy RemoteSigned  </p>
+<p>3) 选择Y 或者A ，就好了</p>
+<p>运行 ：nodemon 文件名</p>
+<h2 id="三-一些常用API"><a href="#三-一些常用API" class="headerlink" title="三.一些常用API"></a>三.一些常用API</h2><p>1.模块：</p>
+<pre><code>const os=require(&#39;os&#39;)
+const cpuStat=require(&#39;cpu-stat&#39;)</code></pre><p>1)内建模块：</p>
+<pre><code>function showStatisties(){
+  const men=os.freemem() / os.totalmem()*100
+  console.log(`内存占用率${men}%`)
+  //freeMem()是未占用的内存，totalmen是已经占用的内存</code></pre><p>2）第三方模块</p>
+<pre><code>//CPU占用比
+  cpuStat.usagePercent((err,percent)=&gt;{
+    console.log(`cpu占用率：${percent}`)
+  })
+}</code></pre><p>3）自定义模块</p>
+<pre><code>const conf=require(&#39;./confi&#39;)
+console.log(conf)
+//如果没有覆盖导出，导入的时候需要结构化一下
+const{rmbToDollar} =require(&#39;./current&#39;)(6)
+//因为导出的是个函数，此处不仅引用，还调用这个函数，传入参数6
+console.log(rmbToDollar(10))</code></pre><p>confi文件：</p>
+<pre><code>//数据库配置
+//模块导出
+
+module.exports={
+  url: &#39;mongodb://localhost:27017&#39;,
+  dbName: &#39;test&#39;,
+  user: &#39;admin&#39;,
+  password: &#39;123&#39;
+}</code></pre><p>current.js</p>
+<p>该文件导出的文件是个工厂函数（创建了一个类实例），工厂函数里面调用功能函数，实现一定的功能</p>
+<pre><code>let rate
+
+//钱币转化
+//功能函数
+function rmbToDollar(rmb){
+return rmb/rate
+}
+//工厂函数
+module.exports=function(r){
+  rate=r
+  return{rmbToDollar}
+}</code></pre><p>2.文件读取写入与异步操作</p>
+<p>readFileSync是个同步读取文件的函数，读取完毕才可以继续执行下面的代码</p>
+<p>readFile可以异步读取文件，不会阻塞</p>
+<p>将异步转化为同步的方法：</p>
+<p>1）promise</p>
+<p>2)   generator</p>
+<p>3)   async await</p>
+<pre><code>const fs= require(&#39;fs&#39;)
+// 读取一个文件
+//这行代码没有执行完毕，后面的代码就不会执行
+const data=fs.readFileSync(&#39;./confi.js&#39;)//阻塞操作
+console.log(&#39;data1&#39;,data)
+
+//异步版本
+fs.readFile(&#39;./confi.js&#39;,(err,data)=&gt;{
+  console.log(&#39;data2&#39;,data)
+})
+console.log(&#39;其他操作&#39;)
+
+
+//promise
+//异步代码同步化
+const {promisify}=require(&#39;util&#39;)
+const readfile =promisify(fs.readFile)
+readfile(&#39;./confi.js&#39;).then((data)=&gt;{
+console.log(&#39;data3&#39;,data)
+})
+//v10.0
+//fs Promise Api
+const {promises}=require(&#39;fs&#39;)
+promises.readFile(&#39;./confi.js&#39;).then(data=&gt;console.log(&#39;data4&#39;,data))
+
+//generator
+//async await</code></pre><p>打印出来的顺序:data1 其他操作 data2 data3 data4</p>
+<p>3.buffer</p>
+<p>buffer是八位字节组成的数组，可以把有效的在js中存储二进制</p>
+<p>buffer创建的方式有2种，第一种是Buffer.alloc(10)，可以分配内存，此处是10个内存，每个内存2个字节（8位），，内容为空，第二种是由数据创建，Buffer.from([1,2,3])，创建的buffer分配的内存和内容和创建它的数据一样</p>
+<p>写入的时候，若写入的内容大小超过它自身的，则超过的会被截断丢失</p>
+<pre><code>/创建buffer
+const buf1=Buffer.alloc(10)//分配内存
+console.log(&#39;buf1&#39;,buf1)
+//由数据创建
+const buf2=Buffer.from([1,2,3])
+console.log(buf2)
+
+//字符串,一个英文字母需要两个字节，默认的编码方式：utf8,一个汉字需要3个字节
+const buf3=Buffer.from(&#39;hello,开课吧&#39;)
+console.log(&#39;字符串buffer&#39;,buf3)
+
+//写入,超过截断
+buf1.write(&#39;hello&#39;)
+console.log(&#39;op&#39;,buf1)
+
+//读取
+console.log(&#39;读取1&#39;,buf3.toString())//以默认的utf8读取，可读取中文字符
+console.log(&#39;读取2&#39;,buf3.toString(&#39;ASCII&#39;))
+
+//合并,底层数据拼接原理
+const buf4=Buffer.concat([buf1,buf3])
+console.log(buf4.toString())</code></pre><p>4.http</p>
+<p>网络请求</p>
+<p>如果输入的地址是‘/’（根路径）返回首页</p>
+<pre><code>const http=require(&#39;http&#39;)
+const fs=require(&#39;fs&#39;)
+const path=require(&#39;path&#39;)
+http.createServer((req,res)=&gt;{
+console.log(&#39;来了一个请求&#39;)
+if(req.url===&#39;/&#39;&amp;&amp;req.method===&#39;GET&#39;){
+  //读取首页,path.resolve读取绝对地址
+  console.log(path.resolve(&#39;./index.html&#39;))
+  fs.readFile(path.resolve(&#39;./index.html&#39;),(err,data)=&gt;{
+    //错误处理
+    if(err){
+      res.statusCode=500
+      res.end(&#39;500-reeor&#39;)
+      return
+    }
+    //设置状态码
+    res.statusCode=200;//请求成功
+    res.setHeader(&#39;Content-type&#39;,&#39;text/html&#39;)//响应头
+    res.end(data)
+    res.end(&#39;服务器响应啦&#39;)
+  })
+  // res.end(&#39;服务器响应啦&#39;)
+}else if(req.url===&#39;/users&#39;&amp;&amp;req.method===&#39;GET&#39;){
+  //接口编写
+  res.statusCode=200
+  res.setHeader(&#39;Content-Type&#39;,&#39;application/json&#39;)
+  res.end(JSON.stringify([{name:&#39;ami&#39;,age:&#39;12&#39;}]))
+  //序列化，变成字符串
+  //返回的数据必须是string或buffer
+}else if(req.headers.accept.indexOf(&#39;image/*&#39;)!==-1&amp;&amp;req.method===&#39;GET&#39;){
+//如果请求的有图片（任意形式）
+  console.log(&#39;url&#39;,&#39;.&#39;+req.url)
+  //搭个管道流向响应res，复制图片显示在页面上
+fs.createReadStream(&#39;.&#39;+req.url).pipe(res)
+}
+
+}).listen(3000)
+</code></pre><p>index.html文件：</p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&#39;en&#39;&gt;
+  &lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&#39;viewport&#39;content=&quot;width=device-width,initial-scale=1.0&quot;&gt;
+    &lt;meta http-equiv=&#39;X-UA-Compatible&#39;content=&#39;ie=edge&#39;&gt;
+    &lt;title&gt;souye&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;首页&lt;/h1&gt;
+    &lt;img src=&#39;01.jpg&#39;alt=&#39;&#39;/&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre><p>5.stream</p>
+<p>流，用于node中流数据的交互接口</p>
+<pre><code>const fs=require(&#39;fs&#39;)
+const rs=fs.createReadStream(&#39;./confi.js&#39;)//读取流
+const ws=fs.createWriteStream(&#39;./confi2.js&#39;)//写入流
+
+rs.pipe(ws);//管道，把写入流和读取流连接 读取流流入到写入流，相当与一个文件的复制操作</code></pre><p>结果：生成confi2.js文件，内容和confi.js一样</p>
+<p>对二进制友好，可以复制图片</p>
+<pre><code>const rs2=fs.createReadStream(&#39;./01.jpg&#39;)//读取流
+const ws2=fs.createWriteStream(&#39;./02.jpg&#39;)//写入流
+rs2.pipe(ws2)</code></pre><p>6.express</p>
+<p>安装express npm i express</p>
+<p>以下案例包括两个方法：get和listen(监听端口)</p>
+<pre><code>const http=require(&#39;http&#39;)
+const url=require(&#39;url&#39;)
+//实现一个路由器的功能
+let router=[];
+//router用于存路径
+class Application{
+  //get的方法
+  //构造路由对象
+  get(path,handler){
+    router.push({
+      path,
+      method:&#39;get&#39;,
+      handler
+    })
+    //放入router
+  }
+  listen(port){
+//创建server
+   http.createServer((req,res)=&gt;{
+   let {pathname}=url.parse(req.url,true)
+   //url.parse(req.url,true)生成一个对象
+   //遍历路由，找到路径并确定在router
+   for(const route of router){
+ if(route.path===pathname){
+ //handler是相关处理方法
+   route.handler(req,res)
+   return
+ }
+   }
+   }).listen(...arguments)
+  }
+
+}
+//app是Application的实例
+module.exports=function name(config){
+  return new Application();
+}</code></pre><p>应用：</p>
+<p>express.test.js</p>
+<p>以app实例去请求，不需要用if语句去判断路径和方法，直接请求对应路径</p>
+<p>此处以首页请求为例</p>
+<pre><code>const express=require(&#39;express&#39;)
+const fs=require(&#39;fs&#39;)
+const path=require(&#39;path&#39;)
+
+const app=express()
+app.get(&#39;/&#39;,(req,res)=&gt;{
+  //读取首页,path.resolve读取绝对地址
+  console.log(path.resolve(&#39;./index.html&#39;))
+  fs.readFile(path.resolve(&#39;./index.html&#39;),(err,data)=&gt;{
+    //错误处理
+    if(err){
+      res.statusCode=500
+      res.end(&#39;500-reeor&#39;)
+      return
+    }
+    //设置状态码
+    res.statusCode=200;//请求成功
+    res.setHeader(&#39;Content-type&#39;,&#39;text/html&#39;)//响应头
+    res.end(data)
+    res.end(&#39;服务器响应啦&#39;)
+  })
+})
+//app可以监听该地址，一旦监听到，就执行函数
+app.listen(3000)</code></pre>
+  </article>
+  
+    
+<div class="nexmoe-post-copyright">
+<i class="mdui-list-item-icon nexmoefont icon-info-circle"></i>
+<strong>Author：</strong>shuo<br>
+<strong>Link：</strong><a href="http://yoursite.com/2019/10/25/node.js/" title="http://yoursite.com/2019/10/25/node.js/" target="_blank" rel="noopener">http://yoursite.com/2019/10/25/node.js/</a><br>
+
+  <strong>版权声明：</strong>本文采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/deed.zh" target="_blank">CC BY-NC-SA 3.0 CN</a> 协议进行许可
+
+</div>
+
+
+  
+  <section class="nexmoe-comment">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1.5.0/dist/gitalk.min.css">
+<div id="gitalk"></div>
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1.5.0/dist/gitalk.min.js"></script>
+<script type="text/javascript">
+    var gitalk = new Gitalk({
+        clientID: '80b2453b6d5f37ad6225',
+        clientSecret: '43e99fa852795c9a7b3eb924b2558c64b84bbdeb',
+        id: window.location.pathname,
+        repo: 'nexmoe.github.io',
+        owner: 'nexmoe',
+        admin: 'nexmoe'
+    })
+    gitalk.render('gitalk')
+</script>
+</section>
+</div>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/mdui@0.4.3/dist/js/mdui.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+ 
+    <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+
+
+ 
+    <script src="https://cdn.jsdelivr.net/npm/smoothscroll-for-websites@1.4.9/SmoothScroll.min.js"></script>
+
+
+<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.15.8/build/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+<script src="../../../../js/app.js?v=1571994655044"></script>
+<script src="https://cdn.jsdelivr.net/npm/lazysizes@5.1.0/lazysizes.min.js"></script>
+
+  
+
+
+
+
+
+</body>
+
+</html>
