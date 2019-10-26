@@ -3,7 +3,7 @@
 
 <head><meta name="generator" content="Hexo 3.9.0">
   
-  <title>日行千里</title>
+  <title>Css3选择器 - 日行千里</title>
   <meta charset="UTF-8">
   <meta name="description" content="程序猿日常">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -11,24 +11,26 @@
   
 
   <link rel="shortcut icon" href="/favicon.ico" type="image/png">
-  <meta name="description" content="使用ESLint 、prettier、husky、lint-staged实现半自动化构建代码">
+  <meta name="description" content="css3选择器">
 <meta property="og:type" content="article">
-<meta property="og:title" content="日行千里">
-<meta property="og:url" content="http://yoursite.com/2019/08/24/调试配置/index.html">
+<meta property="og:title" content="Css3选择器">
+<meta property="og:url" content="http://yoursite.com/2019/10/26/20191026-css3选择器/index.html">
 <meta property="og:site_name" content="日行千里">
-<meta property="og:description" content="使用ESLint 、prettier、husky、lint-staged实现半自动化构建代码">
+<meta property="og:description" content="css3选择器">
 <meta property="og:locale" content="zh-tw">
-<meta property="og:updated_time" content="2019-08-26T08:02:55.477Z">
+<meta property="og:image" content="https://segmentfault.com/img/bV3tr0?w=554&h=139">
+<meta property="og:updated_time" content="2019-10-26T03:20:13.651Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="日行千里">
-<meta name="twitter:description" content="使用ESLint 、prettier、husky、lint-staged实现半自动化构建代码">
+<meta name="twitter:title" content="Css3选择器">
+<meta name="twitter:description" content="css3选择器">
+<meta name="twitter:image" content="https://segmentfault.com/img/bV3tr0?w=554&h=139">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdui@0.4.3/dist/css/mdui.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.15.8/styles/atom-one-dark.css">
    
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
   
   <link rel="stylesheet" href="//at.alicdn.com/t/font_1038733_0xvrvpg9c0r.css">
-  <link rel="stylesheet" href="../../../../css/style.css?v=1572060641481">
+  <link rel="stylesheet" href="../../../../css/style.css?v=1572060641292">
 </head>
 
 <body class="mdui-drawer-body-left">
@@ -121,83 +123,173 @@
         <div class="nexmoe-post">
     <div class="nexmoe-post-cover"> 
         
-            <img src="http://b-ssl.duitang.com/uploads/item/201708/24/20170824232705_Y2x58.jpeg">
+        <img src="http://img2.imgtn.bdimg.com/it/u=3170525873,3410457583&fm=26&gp=0.jpg">
         
-        <h1></h1>
+        <h1>Css3选择器</h1>
     </div>
   <div class="nexmoe-post-meta">
-    <a><i class="nexmoefont icon-calendar-fill"></i>2019年08月24日</a>
-    <a><i class="nexmoefont icon-areachart"></i>711 字</a>
-    <a><i class="nexmoefont icon-time-circle-fill"></i>大概 3 分钟</a>
+    <a><i class="nexmoefont icon-calendar-fill"></i>2019年10月26日</a>
+    <a><i class="nexmoefont icon-areachart"></i>922 字</a>
+    <a><i class="nexmoefont icon-time-circle-fill"></i>大概 4 分钟</a>
     
     
   </div>
   <article>
-    <h1 id="使用ESLint-、prettier、husky、lint-staged实现半自动化构建代码"><a href="#使用ESLint-、prettier、husky、lint-staged实现半自动化构建代码" class="headerlink" title="使用ESLint 、prettier、husky、lint-staged实现半自动化构建代码"></a>使用ESLint 、prettier、husky、lint-staged实现半自动化构建代码</h1><a id="more"></a>
+    <h1 id="css3选择器"><a href="#css3选择器" class="headerlink" title="css3选择器"></a>css3选择器</h1><a id="more"></a>
 
-<p>1.关于半自动化构建代码的实现过程：</p>
-<p>-&gt; 待提交的代码<br>-&gt; git add 添加到暂存区<br>-&gt; 执行 git commit<br>-&gt; husky注册在git pre-commit的钩子调起 lint-staged<br>-&gt; lint-staged 取得所有被提交的文件依次执行写好的任务（ESLint 和 Prettier）<br>-&gt; 如果有错误（没通过ESlint检查）则停止任务，等待下次commit，同时打印错误信息<br>-&gt; 成功提交</p>
-<p>2.介绍一下husky</p>
-<p><code>husky</code> 其实就是一个为 <code>git</code> 客户端增加 hook 的工具。hook可以理解成当执行如<code>git add、git commit</code>等git操作时的回调。将其安装到所在仓库的过程中它会自动在 <code>.git/</code> 目录下增加相应的钩子实现在 <code>pre-commit</code> 阶段就执行一系列流程保证每一个 commit 的正确性。部分在 cd <code>commit stage</code> 执行的命令可以挪动到本地执行，比如 lint 检查、比如单元测试。</p>
-<p>3.安装和配置husky和hook</p>
-<pre><code>npm i husky lint-staged --save-dev</code></pre><p>修改 <code>package.json</code> 添加 pre-commit 钩子和配置lint-staged</p>
-<pre><code>{
-  &quot;scripts&quot;: {
-    &quot;precommit&quot;: &quot;lint-staged&quot;
-  }
-  &quot;lint-staged&quot;: {   // lint-staged 配置
-        &quot;eslint --fix --ext .js&quot;,
-        &quot;prettier --write&quot;,
-        &quot;git add&quot;
-        ]
-    },
-}</code></pre><p>lint-staged 的配置是：在 git 的待提交的文件中，在 app 目录下的所有 .js .jsx 都要执行三条命令。Lint-staged保证只对当前add到git stage区的文件进行扫描操作.</p>
-<p>在进行git commit的时候回触发到git hook进而执行precommit，而precommit脚本引用了lint-staged配置表明只对git add到stage区的文件进行扫描，具体lint-staged做了三件事情：1. 执行eslint –fix操作，进行扫描，若发现工具可修复的问题进行fix；2. 执行prettier脚本，这是对代码进行格式化的，3. 上述两项任务完成后对代码重新add。</p>
-<p>4.关使用prettier和ESLint：<a href="https://zzjshuo.club/2019/08/24/Prettier/" target="_blank" rel="noopener">https://zzjshuo.club/2019/08/24/Prettier/</a></p>
-<p>5.可以初始化ESLint</p>
-<pre><code>node_modules/.bin/eslint --init</code></pre><p>生成配置文件.eslintrc.json（大体如下）：</p>
-<pre><code>{
-    &quot;env&quot;: { 
-        &quot;browser&quot;: true,
-        &quot;commonjs&quot;: true,
-        &quot;es6&quot;: true
-    },
-/*因为前端使用的React框架，eslint会对React等变量进行扫描会报出no-undefined的error，需要另其为global变量才能避开扫描。*/
-    &quot;globals&quot;:{
-    &quot;React&quot;:&quot;readable&quot;
-    },
-    &quot;extends&quot;: [&quot;eslint-config-ali&quot;,&quot;prettier&quot;, &quot;plugin:prettier/recommended&quot;],
-    &quot;parserOptions&quot;: {
-        &quot;ecmaFeatures&quot;: {
-            &quot;experimentalObjectRestSpread&quot;: true,
-            &quot;jsx&quot;: true
-        },
-        &quot;sourceType&quot;: &quot;module&quot;
-    },
-    &quot;plugins&quot;: [&quot;prettier&quot;],
-    &quot;rules&quot;: {
-        &quot;indent&quot;: [
-            &quot;error&quot;,
-            4
-        ],
-        &quot;linebreak-style&quot;: [
-            &quot;error&quot;,
-            &quot;windows&quot;
-        ],
-        &quot;quotes&quot;: [
-            &quot;error&quot;,
-            &quot;single&quot;
-        ],
-        &quot;semi&quot;: [
-            &quot;error&quot;,
-            &quot;always&quot;
-        ]
-    }
-}</code></pre><h3 id="调试配置"><a href="#调试配置" class="headerlink" title="调试配置"></a>调试配置</h3><p>配置肯定是不能拿来就用的，推荐先就只使用 <code>eslint:recommended</code> 版本。</p>
-<p>参考链接：</p>
-<p><a href="https://blog.csdn.net/u011521203/article/details/87546146" target="_blank" rel="noopener">https://blog.csdn.net/u011521203/article/details/87546146</a></p>
-<p><a href="https://segmentfault.com/a/1190000009546913" target="_blank" rel="noopener">https://segmentfault.com/a/1190000009546913</a></p>
-<p><a href="https://www.jianshu.com/p/cdd749c624d9" target="_blank" rel="noopener">https://www.jianshu.com/p/cdd749c624d9</a></p>
+<h2 id="1-基本选择器"><a href="#1-基本选择器" class="headerlink" title="1.基本选择器"></a>1.基本选择器</h2><p>1）类选择器</p>
+<pre><code>&lt;p class=&quot;cl1&quot;&gt;类选择器&lt;/p&gt;
+//css
+.cl1{
+color:red
+}</code></pre><p>2) id选择器</p>
+<pre><code>&lt;p id=&quot;id1&quot;&gt;id选择器&lt;/p&gt;
+//css
+#id1{
+color:red
+}</code></pre><p>3)标签选择器</p>
+<pre><code>&lt;p&gt;id选择器&lt;/p&gt;
+//css
+p{
+color:red
+}</code></pre><p>4）后代选择器</p>
+<pre><code>&lt;div id=&quot;sider&quot;&gt;  
+     &lt;h3&gt;内部&lt;/h3&gt;
+     &lt;ul&gt; 
+         &lt;li&gt;列表1&lt;/li&gt;
+         &lt;li&gt;列表2&lt;/li&gt;
+         &lt;li&gt;列表3&lt;/li&gt;
+     &lt;/ul&gt;
+ &lt;/div&gt;
+ //css
+ #sider h3{color:red;}
+ #sider li {color:palegreen;}</code></pre><p>5) 子元素选择器</p>
+<pre><code>&lt;div id=&quot;sider&quot;&gt;  
+     &lt;h3&gt;内部&lt;/h3&gt;
+     &lt;ul&gt; 
+         &lt;li&gt;列表1&lt;/li&gt;
+         &lt;li&gt;列表2&lt;/li&gt;
+         &lt;li&gt;列表3&lt;/li&gt;
+     &lt;/ul&gt;
+ &lt;/div&gt;
+ //css
+ #sider &gt; ul{
+ color:red;
+ }</code></pre><p>6) 相邻兄弟选择器</p>
+<pre><code>&lt;div id=&quot;sider&quot;&gt;  
+     &lt;h3&gt;内部&lt;/h3&gt;
+     &lt;p&gt;段落1&lt;/p&gt;
+     &lt;ul&gt; 
+         &lt;li&gt;列表1&lt;/li&gt;
+         &lt;li&gt;列表2&lt;/li&gt;
+         &lt;li&gt;列表3&lt;/li&gt;
+     &lt;/ul&gt;
+     &lt;p&gt;段落2&lt;/p&gt;
+ &lt;/div&gt;
+ //css
+ #sider &gt; ul &gt; li + li{color:palegreen;}
+ //只有列表2、列表3变色
+ #sider h3 ~ p{
+color:blueviolet
+}
+//段落1和段落2都变色</code></pre><h2 id="2-属性选择器"><a href="#2-属性选择器" class="headerlink" title="2.属性选择器"></a>2.属性选择器</h2><p>1）.E[attr] 属性名</p>
+<p>为带有 title 属性的所有元素设置样式：</p>
+<pre><code>[title]
+{
+color:red;
+}</code></pre><p>2）.E[attr=”value”] 属性名和值</p>
+<pre><code>E[attr^=&quot;value&quot;]  ^开头 $结尾 *只要包含就行 ~ 空格分开 |开头，包括以-开头的</code></pre><h2 id="3-伪类选择器"><a href="#3-伪类选择器" class="headerlink" title="3.伪类选择器"></a>3.伪类选择器</h2><p>1）未访问：</p>
+<pre><code>a:link{color:red}</code></pre><p>2).鼠标悬停</p>
+<pre><code>a:hover{color:pink;}</code></pre><p>3)鼠标点击时</p>
+<pre><code>a:active{color:green;}</code></pre><p>4).点击后</p>
+<pre><code>a:visited{color:五颜六色;}</code></pre><p><strong>注:hover是可以用于多个元素身上的,但其他三个只能用于具有点击功能的元素上</strong></p>
+<p>5).聚焦</p>
+<pre><code>a:focus{color:五光十色;} 
+//多用于输入框或链接</code></pre><p><strong>注:IE7以前不支持:focus，IE6以前不支持:hover :active</strong></p>
+<p>6）结构伪类选择器:第一个元素的小标为1不是为0</p>
+<pre><code>section:nth-child(2){color:deeppink;}
+//表示选中html里的第二个section元素,文字设置为deeppink
+p:first-child{color:red;}
+//选中第一个
+p:last-child{color:red;}
+//选中最后一个
+section:nth-child(odd){color:deeppink;}
+section:nth-child(2n+1){color:deeppink;}
+//选中奇数项
+section:nth-child(even){color:deeppink;}
+section:nth-child(2n){color:deeppink;}
+//选中偶数项
+section:nth-last-child(2){color:deeppink;}
+//倒数第二个
+li:first-of-type{
+color:red
+}
+li:last-of-type{
+color:red
+}
+//查找的时候限制类型，相对于父元素，在查找的时候只会查找满足条件的元素，过滤掉其他类型的元素
+li:only-child{
+color:red
+}
+//选择父元素唯一孩子的li
+dd:nth-of-type(2){
+color:red
+}
+//选择父元素第二个dd子元素
+dd:nth-last-of-type(2){
+color:red
+}
+//选择父元素倒数第二个dd子元素
+h2:only-of-type{
+color:red
+}
+//选择父元素下唯一的h2元素
+p:empty{
+
+}
+//选择没有任何内容的p元素</code></pre><p>7) UI元素状态伪类</p>
+<pre><code>//按钮可用
+button:enable{
+color:red;
+}
+//按钮不可用
+button:disable{
+color:red;
+}
+//复选按钮被选中
+input[type=checkbox]:check{
+color:red
+}</code></pre><p>8）伪元素选择器</p>
+<pre><code>p::firdt-line{
+color:red
+}
+//选择某个p元素的首行
+p::firt-letter{
+color:red
+}
+//选择每个p元素的首字母
+li::before{
+content:&#39;before:&#39;
+}
+//li元素内容的前面插入内容
+li::after{
+content:&#39;baybay&#39;
+} //li元素内容的后面插入内容</code></pre><h2 id="4-分组"><a href="#4-分组" class="headerlink" title="4.分组"></a>4.分组</h2><p>1)选择器分组</p>
+<pre><code>h1{
+color:red;
+}
+h2{
+color:red;
+}
+h3{
+color:red;
+}
+======等价与======
+h1,h2,h3{
+color:red;
+}</code></pre><p>2)优先级：内联样式&gt;id选择器&gt;类选择器&gt;类型选择器（伪元素）</p>
+<p><img src="https://segmentfault.com/img/bV3tr0?w=554&h=139" alt="clipboard.png"></p>
+<p>3)提高优先级的方法：!important</p>
 
   </article>
   
@@ -205,7 +297,7 @@
 <div class="nexmoe-post-copyright">
 <i class="mdui-list-item-icon nexmoefont icon-info-circle"></i>
 <strong>Author：</strong>shuo<br>
-<strong>Link：</strong><a href="http://yoursite.com/2019/08/24/调试配置/" title="http://yoursite.com/2019/08/24/调试配置/" target="_blank" rel="noopener">http://yoursite.com/2019/08/24/调试配置/</a><br>
+<strong>Link：</strong><a href="http://yoursite.com/2019/10/26/20191026-css3选择器/" title="http://yoursite.com/2019/10/26/20191026-css3选择器/" target="_blank" rel="noopener">http://yoursite.com/2019/10/26/20191026-css3选择器/</a><br>
 
   <strong>版权声明：</strong>本文采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/deed.zh" target="_blank">CC BY-NC-SA 3.0 CN</a> 协议进行许可
 
@@ -245,7 +337,7 @@
 <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.15.8/build/highlight.min.js"></script>
 <script>hljs.initHighlightingOnLoad();</script>
 
-<script src="../../../../js/app.js?v=1572060641486"></script>
+<script src="../../../../js/app.js?v=1572060641303"></script>
 <script src="https://cdn.jsdelivr.net/npm/lazysizes@5.1.0/lazysizes.min.js"></script>
 
   
